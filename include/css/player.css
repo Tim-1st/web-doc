@@ -400,6 +400,8 @@ h3 a {
   /* Effet de flou pour les éléments derrière l'overlay */
   backdrop-filter: blur(10px); /* Flouter l'arrière-plan */
   -webkit-backdrop-filter: blur(10px); /* Safari (prend en charge l'effet de flou) */
+    overflow: auto; /* Ajouté ici */
+
 }
 
 #credits-overlay.open {
@@ -445,7 +447,7 @@ h3 a {
   justify-content: center; /* Centrer les logos horizontalement */
   align-items: center;
       gap: 50px;
-    margin-top: 13rem;
+margin-top: 2vh;
 }
 
 #logos-container img {
