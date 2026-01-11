@@ -1,0 +1,800 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+
+
+body {
+  font-family: "Ubuntu";
+}
+
+
+
+
+/* =========================
+   Balises styles
+  ========================= */
+
+h1 {
+  font-size: 2rem;
+  text-align: center;
+  color: black;
+  padding: 0.5rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  font-weight: bold;
+  cursor: pointer;
+  margin: 0;
+  padding: 0;
+  margin-top: 1rem;
+}
+
+h1:hover {
+  transform: scale(1.05);
+}
+
+h1:active {
+  transform: scale(0.98);
+}
+
+h2 {
+  font-size: 0.9rem;
+  color: white;
+  text-align: center;
+  font-weight: normal;
+}
+
+h3 span{
+  color: #56739a;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+
+
+
+/* =========================
+   Header
+  ========================= */
+
+  header {
+  width: 100%;
+  display: flex;
+  justify-content: center; 
+  position: relative; 
+}
+
+.title-contenair {
+  display: flex;
+  flex-direction: column; 
+  justify-content: center; 
+  align-items: center; 
+  text-align: center; 
+  margin: 0 auto; 
+}
+
+
+
+
+/* =========================
+   Footer
+  ========================= */
+
+footer {
+  width: 50rem;
+  height: 2.3rem;
+  background: rgba(34, 66, 124, 0.4);
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  border-top-left-radius: 15px;
+  transition: width 0.3s ease;
+  display: flex;
+  justify-content: space-between; /* Séparer le contenu en deux parties : gauche et droite */
+  align-items: center; /* Centrer verticalement les éléments */
+  padding: 0 1rem; /* Ajouter un padding de chaque côté */
+  z-index: 999999;
+}
+
+footer a {
+  color: white; /* Couleur blanche pour les liens */
+  text-decoration: none; /* Enlever la décoration par défaut */
+  font-size: 1rem; /* Taille de police */
+  transition: color 0.3s ease; /* Transition fluide lors du survol */
+}
+
+footer a:hover {
+  color: #22427C; /* Changer la couleur des liens au survol (optionnel) */
+}
+
+footer .left-links { /* Classe pour les liens à gauche */
+  display: flex;
+  justify-content: flex-start; /* Alignement à gauche */
+  gap: 2rem; /* Espacement entre les liens */
+}
+
+footer .right-buttons { /* Classe pour les boutons à droite */
+  display: flex;
+  justify-content: flex-end; /* Alignement à droite */
+}
+
+footer a#fullscreen-btn,
+footer a#share-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px; /* Espace entre le texte et le logo */
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+footer a#fullscreen-btn:hover,
+footer a#share-btn:hover {
+  color: #22427C;
+  text-decoration: none;
+}
+
+#fullscreen-text,
+#share-text {
+  font-size: 10px; /* Taille du texte */
+  color: white;    /* Couleur du texte */
+}
+
+#fullscreen-icon,
+#share-icon {
+  width: 1rem;
+  height: auto;
+  transition: transform 0.3s ease;
+  margin: 0;
+  cursor: pointer; /* Assurer que l'icône est cliquable */
+}
+
+footer a#fullscreen-btn:hover #fullscreen-icon,
+footer a#share-btn:hover #share-icon {
+  transform: scale(1.1); /* Effet de zoom au survol */
+}
+
+.left-links a {
+  font-size: 10px;
+}
+
+footer #fullscreen-text,
+footer #share-text {
+  opacity: 1;
+  transition: opacity 0.3s ease; /* Transition de l'opacité */
+}
+
+h3 a {
+  text-decoration: none;
+  color: #56739a;
+}
+
+
+
+
+
+/* =========================
+   Catégories
+  ========================= */
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(34, 66, 124, 0.4);
+  width: 15rem;
+  height: 2rem;
+  border-radius: 8px;
+  transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.content:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+  background: rgba(34, 66, 124, 0.6);
+}
+
+.cercle {
+  width: 50px;
+  height: 50px;
+  background: rgba(34, 66, 124);
+  border-radius: 69% 31% 70% 30% / 30% 68% 32% 70%;
+  transition: all 0.2s ease;
+}
+
+.boutton {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 3rem;
+  position: relative;
+  transition: margin-bottom 0.3s ease, transform 0.2s ease;
+}
+
+.boutton:hover .cercle {
+    transform: rotate(180deg);
+    transition: transform 1s ease;
+}
+
+.catégories {
+  position: fixed;
+  top: 53%;
+  left: 20%;
+  transform: translate(-50%, -50%);
+}
+
+/* Style pour la page active */
+.content.active-page {
+  background: rgba(34, 66, 124, 1);
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(34, 66, 124, 0.6);
+}
+
+
+
+
+
+/* =========================
+   Emplacement des séquences a modifier
+  ========================= */
+
+#element_F0BFE707-FE80-D494-2C21-35EA24A2292A,
+#element_A1DDDACE-DA19-ECEB-50E0-3618375EDADB,
+#element_E1EC9EAC-B232-C44D-1BBF-361C86901923,
+#element_526578DB-716E-9C68-325B-361D31F923BE,
+#element_07EAF37B-9D34-0C70-4831-361DF07A3159 {
+    right: 5rem;
+    left: auto;
+    width: 658px;
+    height: 391px;
+    top: 9rem;
+    bottom: auto;
+    transition: right 0.3s ease, width 0.3s ease, height 0.3s ease;
+}
+#img_F0BFE707-FE80-D494-2C21-35EA24A2292A,
+#img_A1DDDACE-DA19-ECEB-50E0-3618375EDADB,
+#img_E1EC9EAC-B232-C44D-1BBF-361C86901923,
+#img_526578DB-716E-9C68-325B-361D31F923BE,
+#img_07EAF37B-9D34-0C70-4831-361DF07A3159 {
+    width: 658px;
+    height: 391px;
+        transition: right 0.3s ease, width 0.3s ease, height 0.3s ease;
+
+}
+
+
+
+
+
+/* =========================
+   Social Media LinkedIn
+  ========================= */
+
+.social-media {
+  position: fixed;
+  top: 2rem;
+  right: 0;
+  z-index: 1;
+  bottom: 0;
+}
+
+.linkedin-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  width: 4rem;
+}
+
+
+.linkedin-container img {
+  width: 4rem;
+  height: 4rem;
+  margin: 0;
+  transition: transform 0.4s ease;
+}
+
+
+.linkedin-band{
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+
+.linkedin-text-wrapper {
+  position: relative;
+  padding: 0.6rem;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.2s ease, transform 0.3s ease;
+}
+
+
+.linkedin-text {
+  font-size: 1.2rem;
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  letter-spacing: 0.3rem;
+  position: relative;
+  color: #22427C;
+}
+
+
+.linkedin-text-wrapper::before,
+.linkedin-text-wrapper::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: rgba(34, 66, 124, 0.4);
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform 0.4s ease;
+}
+
+.linkedin-text-wrapper::before { left: 0; }
+.linkedin-text-wrapper::after  { right: 0; }
+
+
+.linkedin-container:hover .linkedin-band{
+  max-height: 400px;
+}
+
+.linkedin-container:hover .linkedin-text-wrapper {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.linkedin-container:hover .linkedin-text-wrapper::before,
+.linkedin-container:hover .linkedin-text-wrapper::after {
+  transform: scaleY(1);
+}
+
+.linkedin-container:hover img{
+  transform: scale(1.05);
+}
+
+@keyframes gentle-pulse {
+  0%,100% { transform: scale(1); }
+  50% { transform: scale(1.02); }
+}
+
+.linkedin-container img {
+  animation: gentle-pulse 3s ease-in-out infinite;
+}
+
+.linkedin-container:hover img {
+  animation: none;
+}
+
+.linkedin-container:hover .linkedin-text::before {
+  opacity: 1;
+  transform: scale(1);
+}
+
+
+
+#credits-overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: calc(100% - 3.4rem);
+  background-color: rgba(34, 66, 124, 0.4);  /* Fond semi-transparent */
+  z-index: 9999;
+  transform: translateX(100%); /* Positionné en dehors de l'écran à droite */
+  transition: transform 0.3s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 1rem;
+  border-radius: 8px;
+  
+  /* Effet de flou pour les éléments derrière l'overlay */
+  backdrop-filter: blur(10px); /* Flouter l'arrière-plan */
+  -webkit-backdrop-filter: blur(10px); /* Safari (prend en charge l'effet de flou) */
+    overflow: auto; /* Ajouté ici */
+
+}
+
+#credits-overlay.open {
+  transform: translateX(0); /* Quand ouvert, l'overlay se déplace en position visible */
+}
+
+.overlay-content {
+  padding: 2rem;
+  color: black;
+  width: 100%;
+  height: 100%;  /* Prendre toute la hauteur disponible */
+  display: flex;
+  flex-direction: column;  /* Organiser le contenu en colonne */
+  justify-content: space-between;  /* Espacer le contenu de manière uniforme */
+}
+
+#credits-overlay h2 {
+  margin-bottom: 1rem;
+}
+
+#close-overlay {
+  padding: 0.5rem 1rem;
+  background-color: #22427C;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  align-self: center; /* Centrer horizontalement */
+  margin-top: 2rem; /* Pousser le bouton vers le bas */
+  margin-bottom: 1rem;
+  z-index: 2;
+}
+
+#close-overlay:hover {
+  background-color: #56739a;
+}
+
+.timeo {
+  color: #56739a;
+  font-weight: bold;
+}
+
+
+#logos-container {
+  display: flex;
+  justify-content: center; /* Centrer les logos horizontalement */
+  align-items: center;
+      gap: 50px;
+margin-top: 2vh;
+}
+
+#logos-container img {
+  height: 50px; /* Taille uniforme pour les logos */
+  width: auto;
+  transition: height 0.3s ease;
+}
+
+.overlay-content h2 {
+  color: white;
+  display: flex;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.overlay-content p {
+  color: white;
+}
+
+.overlay-content a {
+  text-decoration: none;
+  color: #22427C;
+  font-weight: bold;
+  padding-left: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.overlay-content span {
+  color: #22427C;
+  font-weight: bold;
+  padding-left: 1rem;
+}
+
+#credits-overlay {
+  transform: translateX(100%);
+  transition: transform 0.3s ease-in-out;
+}
+
+#credits-overlay.open {
+  transform: translateX(0);
+}
+
+.participation {
+  padding-top: 1rem;
+  padding-bottom: 15px;
+  margin: 0;
+}
+
+.ajust {
+  padding-bottom: 1rem;
+}
+
+
+
+
+
+
+
+/* =========================
+   MEDIA QUERIES
+  ========================= */
+
+@media (max-width: 1120px) {
+
+  /* Ajuster la taille et la position des séquences a modifier */
+  #element_F0BFE707-FE80-D494-2C21-35EA24A2292A,
+  #element_A1DDDACE-DA19-ECEB-50E0-3618375EDADB,
+  #element_E1EC9EAC-B232-C44D-1BBF-361C86901923,
+  #element_526578DB-716E-9C68-325B-361D31F923BE,
+  #element_07EAF37B-9D34-0C70-4831-361DF07A3159 {
+    right: 0rem;
+    width: 500px;
+    height: 281px;
+  }
+  #img_F0BFE707-FE80-D494-2C21-35EA24A2292A,
+  #img_A1DDDACE-DA19-ECEB-50E0-3618375EDADB,
+  #img_E1EC9EAC-B232-C44D-1BBF-361C86901923,
+  #img_526578DB-716E-9C68-325B-361D31F923BE,
+  #img_07EAF37B-9D34-0C70-4831-361DF07A3159 {
+    width: 500px;
+    height: 281px;
+  }
+
+
+
+  /* Ajuster la taille et le comportement du bouton LinkedIn */
+
+  .linkedin-container img {
+    animation: none;
+    transform: none;
+    transition: none;
+  }
+  .linkedin-container:hover img {
+    transform: none;
+    animation: none;
+  }
+
+  .linkedin-container:hover .linkedin-band {
+    max-height: 0;
+  }
+
+  .linkedin-container:hover .linkedin-text-wrapper {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  .linkedin-container:hover .linkedin-text-wrapper::before,
+  .linkedin-container:hover .linkedin-text-wrapper::after {
+    transform: scaleY(0);
+  }
+
+  .linkedin-band,
+  .linkedin-text-wrapper,
+  .linkedin-text-wrapper::before,
+  .linkedin-text-wrapper::after {
+    transition: none;
+  }
+
+
+  #logos-container {
+    gap: 1.2rem;
+  }
+
+  #logos-container img {
+    height: 40px; 
+  }
+
+  
+}
+
+
+@media (max-width: 800px) {
+
+  /* Header adjustments */
+  header {
+    justify-content: flex-start;
+  }
+  .title-contenair {
+    display: flex;
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: flex-start; 
+    text-align: left; 
+    margin: 0; 
+    padding-left: 1rem; 
+  }
+
+  h1 {
+    font-size: 1.2rem;
+    width: 20rem;
+    text-align: left;
+  }
+
+  h3 {
+    font-size: 0.9rem;
+    text-align: left;
+  }
+
+
+
+
+  /* Footer adjustments */
+  #fullscreen-text {
+    display: none;  
+  }
+
+  footer {
+    width: 30rem; 
+  }
+
+  #fullscreen-text,
+  #share-text {
+    display: none; 
+  }
+
+  footer a#fullscreen-btn,
+  footer a#share-btn {
+    justify-content: center; 
+    gap: 0;
+    padding: 0;
+  }
+
+  footer #fullscreen-text,
+  footer #share-text {
+    opacity: 0;  
+  }
+
+  #fullscreen-text,
+  #share-text {
+    display: block; 
+  }
+
+
+
+  /* Catégories adjustments */
+  .boutton {
+    margin-bottom: 0.7rem;
+  }
+    
+  .cercle {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+    
+  h2 {
+    font-size: 0.8rem;
+    color: #22427C;
+    text-align: left;
+    font-weight: normal;
+  }
+        
+  .catégories {
+    position: relative;
+    transform: translate(0%, 0%);
+    top: 0%;
+    left: 0%;
+    padding: 0;
+    margin-top: 2rem;
+  }
+    
+  .content {
+    width: auto;
+    height: auto;
+    padding: 0rem;
+    background: none;
+  }
+  
+  #catégorie-ajust {
+    width: auto;
+  }
+  
+  .boutton:hover {
+    transform: scale(1.05);
+    font-weight: bold;
+  }
+
+  .boutton:active {
+    transform: scale(0.95);
+  }
+
+  .content:hover {
+    transform: none;
+    transition: none;
+    background: none;
+  }
+
+  /* Style pour la page active sur mobile */
+  .content.active-page {
+    background: rgba(34, 66, 124, 0.2);
+    font-weight: bold;
+    box-shadow: none;
+    padding: 0rem 0.6rem;
+  }
+  
+  .content.active-page h2 {
+    color: rgba(34, 66, 124, 1);
+    font-weight: bold;
+  }
+
+
+
+  /* Ajuster la taille et la position des séquences a modifier */
+  #element_F0BFE707-FE80-D494-2C21-35EA24A2292A,
+  #element_A1DDDACE-DA19-ECEB-50E0-3618375EDADB,
+  #element_E1EC9EAC-B232-C44D-1BBF-361C86901923,
+  #element_526578DB-716E-9C68-325B-361D31F923BE,
+  #element_07EAF37B-9D34-0C70-4831-361DF07A3159 {
+    top: 22rem;
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
+    width: 480px;
+    height: 270px;
+  }
+  #img_F0BFE707-FE80-D494-2C21-35EA24A2292A,
+  #img_A1DDDACE-DA19-ECEB-50E0-3618375EDADB,
+  #img_E1EC9EAC-B232-C44D-1BBF-361C86901923,
+  #img_526578DB-716E-9C68-325B-361D31F923BE,
+  #img_07EAF37B-9D34-0C70-4831-361DF07A3159 {
+    width: 480px;
+    height: 270px;
+  }
+
+
+
+
+  /* Social Media LinkedIn adjustments */
+  .social-media {
+    top: 1.7rem;
+    right: 0rem;
+  }
+
+
+
+  /* Pour l'overlay qui s'ouvre depuis la droite */
+  #credits-overlay {
+    top: 0;
+    right: 0;
+    bottom: 40px;
+    left: auto;
+    width: 100%;
+    transform: translateX(100%);  /* Caché à droite par défaut */
+  }
+  
+  #credits-overlay.open {
+    transform: translateX(0);  /* Visible quand ouvert */
+  }
+
+  /* Ajuster la position des logos et du bouton en bas */
+  #logos-container {
+    flex-direction: row; /* Assurer que les logos sont bien alignés en ligne */
+    justify-content: center;  /* Centrer les logos */
+    gap: 20px;  /* Espacement entre les logos */
+    margin-top: auto;  /* Placer les logos en bas */
+  }
+
+  #close-overlay {
+    margin-top: 1rem; /* Un peu d'espace avant le bouton */
+  }
+
+  /* Ajuster la taille des logos pour l'écran mobile */
+  #logos-container img {
+    height: 40px;  /* Ajuster la taille des logos */
+  }
+
+  /* Ajuster la taille du texte et du bouton */
+  #close-overlay {
+    font-size: 0.9rem;  /* Réduire la taille du texte du bouton */
+  }
+
+  .overlay-content h2 {
+    font-size: 1rem;  /* Réduire la taille du titre */
+  }
+
+  .overlay-content p, .overlay-content a {
+    font-size: 0.8rem;  /* Réduire la taille du texte et des liens */
+  }
+
+
+
+}
+
+
+@media (max-width: 480px) {
+  footer {
+    width: 20rem;
+  }
+}
