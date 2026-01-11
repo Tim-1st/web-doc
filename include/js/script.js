@@ -1,19 +1,17 @@
-// Activer le bouton correspondant à la page actuelle
+// gestion des boutons active
 (() => {
-  // Récupérer le nom de la page actuelle (décodage de l'URL pour gérer les accents)
+
   const currentPage = decodeURIComponent(window.location.pathname.split('/').pop()) || 'index.html';
   
-  // Trouver tous les boutons de catégories
   const buttons = document.querySelectorAll('.catégories .boutton');
   
   buttons.forEach(button => {
     const href = button.getAttribute('href');
     
-    // Vérifier si le href correspond à la page actuelle
     if (href === currentPage || 
         (currentPage === 'index.html' && href === 'presentation.html') ||
         (currentPage === '' && href === 'presentation.html')) {
-      // Ajouter la classe active au content
+          
       const content = button.querySelector('.content');
       if (content) {
         content.classList.add('active-page');
@@ -22,79 +20,83 @@
   });
 })();
 
+
+
+
+// Gestion de l'option full-screen
 document.getElementById('fullscreen-btn').addEventListener('click', function (e) {
-  e.preventDefault(); // Empêche le lien de faire une navigation
+  e.preventDefault(); 
   
-  // Vérifier si l'appareil prend en charge le mode plein écran
-  if (!document.fullscreenElement &&   // Si on n'est pas déjà en plein écran
+  if (!document.fullscreenElement &&  
       !document.webkitFullscreenElement && 
       !document.mozFullScreenElement && 
       !document.msFullscreenElement) {
 
-    // Tenter de passer en mode plein écran
     if (document.documentElement.requestFullscreen) {
       document.documentElement.requestFullscreen();
-    } else if (document.documentElement.webkitRequestFullscreen) { // Safari
+    } else if (document.documentElement.webkitRequestFullscreen) { 
       document.documentElement.webkitRequestFullscreen();
-    } else if (document.documentElement.mozRequestFullScreen) { // Firefox
+    } else if (document.documentElement.mozRequestFullScreen) { 
       document.documentElement.mozRequestFullScreen();
-    } else if (document.documentElement.msRequestFullscreen) { // IE/Edge
+    } else if (document.documentElement.msRequestFullscreen) { 
       document.documentElement.msRequestFullscreen();
     }
   } else {
-    // Quitter le mode plein écran
+    
     if (document.exitFullscreen) {
       document.exitFullscreen();
-    } else if (document.webkitExitFullscreen) { // Safari
+    } else if (document.webkitExitFullscreen) { 
       document.webkitExitFullscreen();
-    } else if (document.mozCancelFullScreen) { // Firefox
+    } else if (document.mozCancelFullScreen) { 
       document.mozCancelFullScreen();
-    } else if (document.msExitFullscreen) { // IE/Edge
+    } else if (document.msExitFullscreen) { 
       document.msExitFullscreen();
     }
   }
 });
 
+
+
+
+// Gestion de l'option share
 document.getElementById('share-btn').addEventListener('click', function (e) {
-  e.preventDefault(); // Empêche le comportement par défaut du lien
+  e.preventDefault(); 
   
-  // Copie de l'URL actuelle dans le presse-papiers
   const currentUrl = window.location.href;
 
-  // Utilisation de l'API Clipboard pour copier l'URL
   navigator.clipboard.writeText(currentUrl).then(function() {
-    alert("URL copiée dans le presse-papiers !"); // Message de confirmation
+    alert("URL copiée dans le presse-papiers !"); 
   }).catch(function(error) {
     console.error("Erreur lors de la copie de l'URL: ", error);
   });
 });
 
+
+
+
+// Gestion de l'overlay crédits
 (() => {
   const creditsLink = document.querySelector('footer .left-links a[href="#credits"]');
   const creditsOverlay = document.getElementById('credits-overlay');
   const closeOverlayBtn = document.getElementById('close-overlay');
 
-  // Variable pour savoir si l'overlay est ouvert
   let isOverlayOpen = false;
 
-  // Fonction pour ouvrir l'overlay
   const openOverlay = () => {
     creditsOverlay.classList.add('open');
     creditsOverlay.style.transform = 'translateX(0)';
     isOverlayOpen = true;
   };
 
-  // Fonction pour fermer l'overlay
   const closeOverlay = () => {
     creditsOverlay.classList.remove('open');
     creditsOverlay.style.transform = 'translateX(100%)';
     isOverlayOpen = false;
   };
 
-  // Ouvrir/fermer l'overlay lorsqu'on clique sur "Crédits"
   creditsLink.addEventListener('click', (e) => {
     e.preventDefault();
-    e.stopPropagation(); // Empêche la propagation du clic
+    e.stopPropagation(); 
     
     if (isOverlayOpen) {
       closeOverlay();
@@ -103,13 +105,11 @@ document.getElementById('share-btn').addEventListener('click', function (e) {
     }
   });
 
-  // Fermer l'overlay lorsqu'on clique sur le bouton "Fermer"
   closeOverlayBtn.addEventListener('click', (e) => {
-    e.stopPropagation(); // Empêche la propagation du clic
+    e.stopPropagation(); 
     closeOverlay();
   });
 
-  // Fermer l'overlay en cliquant en dehors de celui-ci
   document.addEventListener('click', (e) => {
     if (isOverlayOpen && 
         !creditsOverlay.contains(e.target) && 
@@ -118,7 +118,6 @@ document.getElementById('share-btn').addEventListener('click', function (e) {
     }
   });
 
-  // Empêcher la fermeture si on clique à l'intérieur de l'overlay
   creditsOverlay.addEventListener('click', (e) => {
     e.stopPropagation();
   });
