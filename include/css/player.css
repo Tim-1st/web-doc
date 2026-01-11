@@ -4,6 +4,7 @@
 
 body {
   font-family: "Ubuntu";
+  overflow: hidden;
 }
 
 
@@ -392,7 +393,7 @@ h3 a {
   border-radius: 8px;
   backdrop-filter: blur(10px); 
   -webkit-backdrop-filter: blur(10px); 
-  overflow: auto; 
+  overflow: hidden; 
 }
 
 #credits-overlay.open {
@@ -496,11 +497,9 @@ margin-top: 2vh;
   padding-bottom: 1rem;
 }
 
-
-
-
-
-
+.overlay-content p, .overlay-content a {
+  width: fit-content;
+} 
 
 /* =========================
    MEDIA QUERIES
