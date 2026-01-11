@@ -501,6 +501,8 @@ margin-top: 2vh;
   width: fit-content;
 } 
 
+
+
 /* =========================
    MEDIA QUERIES
   ========================= */
@@ -532,8 +534,8 @@ margin-top: 2vh;
   /*=============================================================*/
 
 
-  a .boutton {
-    width: fit-content;
+  .boutton {
+    width: fit-content; 
   }
 
   .linkedin-container img {
