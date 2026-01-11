@@ -533,7 +533,9 @@ margin-top: 2vh;
   /*=============================================================*/
 
 
-
+  a .boutton {
+    width: fit-content;
+  }
 
   .linkedin-container img {
     animation: none;
