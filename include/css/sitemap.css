@@ -82,12 +82,31 @@
   justify-content: center;
 }
 
+.sitemap-card.active {
+  background: rgba(34, 66, 124, 0.25);
+  border-color: #22427C;
+  box-shadow: 0 8px 25px rgba(34, 66, 124, 0.3);
+  transform: scale(1.05);
+}
+
+.sitemap-card.active .sitemap-icon {
+  transform: scale(1.15);
+}
+
+.sitemap-card.active h3 {
+  font-weight: 900;
+}
+
 .sitemap-card:hover {
   background: rgba(34, 66, 124, 0.15);
   border-color: #22427C;
   transform: translateY(-5px) rotate(5deg);
   box-shadow: 0 10px 30px rgba(34, 66, 124, 0.2);
   border-radius: 31% 69% 30% 70% / 68% 30% 70% 32%;
+}
+
+.sitemap-card.active:hover {
+  transform: translateY(-5px) rotate(5deg) scale(1.05);
 }
 
 .sitemap-card-inner {
@@ -97,6 +116,7 @@
 .sitemap-icon {
   font-size: 2rem;
   margin-bottom: 0.6rem;
+  transition: transform 0.3s ease;
 }
 
 .sitemap-card h3 {
@@ -133,6 +153,9 @@
   transform: scale(1.05);
   box-shadow: 0 6px 20px rgba(34, 66, 124, 0.4);
 }
+
+
+
 
 /* Responsive pour la sitemap */
 @media (max-width: 1024px) {

@@ -6,6 +6,19 @@
 
   let isSitemapOpen = false;
 
+  // Détection de la page actuelle et ajout de la classe active
+  const currentPage = decodeURIComponent(window.location.pathname.split('/').pop() || 'index.html');
+  const sitemapCards = document.querySelectorAll('.sitemap-card');
+  
+  sitemapCards.forEach(card => {
+    const cardHref = card.getAttribute('href');
+    const decodedCardHref = decodeURIComponent(cardHref);
+    
+    if (cardHref === currentPage || decodedCardHref === currentPage) {
+      card.classList.add('active');
+    }
+  });
+
   const openSitemap = () => {
     sitemapOverlay.classList.add('open');
     isSitemapOpen = true;
