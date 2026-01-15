@@ -1,0 +1,268 @@
+#credits-overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 57%;
+  height: calc(100% - 3.4rem);
+  background-color: rgba(34, 66, 124, 0.4);  
+  z-index: 9999;
+  transform: translateX(100%); 
+  transition: transform 0.3s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 1rem;
+  border-radius: 8px;
+  backdrop-filter: blur(10px); 
+  -webkit-backdrop-filter: blur(10px); 
+  overflow: hidden; 
+}
+
+#credits-overlay.open {
+  transform: translateX(0); 
+}
+
+.overlay-content {
+  padding-left: 2rem;
+  padding-right: 2rem;
+  color: black;
+  width: 100%;
+  height: 100%;  
+  display: flex;
+  flex-direction: column;  
+  font-size: 0.8rem;
+}
+
+#credits-overlay h2 {
+  margin-bottom: 1rem;
+}
+
+#close-overlay {
+  padding: 0.5rem 1rem;
+  background-color: #22427C;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  align-self: center; 
+  margin-top: 2rem; 
+  margin-bottom: 1rem;
+  z-index: 2;
+}
+
+#close-overlay:hover {
+  background-color: #56739a;
+}
+
+.timeo {
+  color: #56739a;
+  font-weight: bold;
+}
+
+#logos-container {
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  gap: 50px;
+}
+
+#logos-container img {
+  height: 50px; 
+  width: auto;
+  transition: height 0.3s ease;
+}
+
+.overlay-content h2 {
+  color: white;
+  display: flex;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.overlay-content p {
+  color: white;
+}
+
+.overlay-content a {
+  text-decoration: none;
+  color: #22427C;
+  font-weight: bold;
+  padding-left: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.overlay-content span {
+  color: #22427C;
+  font-weight: bold;
+  padding-left: 1rem;
+}
+
+#credits-overlay {
+  transform: translateX(100%);
+  transition: transform 0.3s ease-in-out;
+}
+
+#credits-overlay.open {
+  transform: translateX(0);
+}
+
+.participation {
+  padding-top: 1rem;
+  padding-bottom: 15px;
+  margin: 0;
+}
+
+.overlay-content p, .overlay-content a {
+  width: fit-content;
+} 
+
+.bloc-1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  padding-top: 1rem;
+}
+
+.bloc-1 div {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.paragraph p {
+  margin: 0;
+  padding: 0;
+}
+
+.bloc-1 a {
+  padding-left: 0 !important;
+  margin-bottom: 0 !important;
+  margin-right: 2rem;
+}
+
+.overlay-footer {
+  margin-top: auto;
+  padding-bottom: 1rem;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#logos-container {
+  margin-bottom: 1.5rem;
+}
+
+#close-overlay {
+  margin: 0;
+}
+
+hr {
+    width: 100%;
+    color: white;
+    padding: 0;
+    margin: 0;
+    background: white;
+    border-color: white;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.overlay-footer p {
+  display: flex; 
+  justify-content: center; 
+  width: 100%; 
+  margin-top: 1vh;
+}
+
+.section-info p {
+  margin-bottom: 1rem;
+  padding: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 1120px) {
+
+    .bloc-1 {
+        margin-top: 0 !important;
+    }
+
+    #logos-container {
+        gap: 1.2rem;
+    }
+
+    #logos-container img {
+        height: 40px; 
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 800px) {
+
+    #credits-overlay {
+        top: 0;
+        right: 0;
+        bottom: 40px;
+        left: auto;
+        width: 100%;
+        transform: translateX(100%);  
+    }
+    
+    #credits-overlay.open {
+        transform: translateX(0);  
+    }
+
+    #logos-container {
+        flex-direction: row; 
+        justify-content: center;  
+        gap: 20px;  
+    }
+
+    #close-overlay {
+        margin-top: 1rem; 
+    }
+
+    #logos-container img {
+        height: 40px;  
+    }
+
+    #close-overlay {
+        font-size: 0.9rem;  
+    }
+
+    .overlay-content h2 {
+        font-size: 1rem;  
+    }
+
+    .overlay-content p, .overlay-content a {
+        font-size: 0.8rem;  
+    }
+
+    hr {
+        margin-top: 0.7rem !important;
+        margin-bottom: 0.7rem !important;
+    }
+
+}
+
