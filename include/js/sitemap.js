@@ -1,5 +1,12 @@
 // Gestion de l'overlay sitemap
 (() => {
+  const normalizePath = (path) => {
+    return path
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "")
+      .toLowerCase();
+  };
+
   const sitemapLink = document.querySelector('footer .left-links a[href="#sitemap"]');
   const sitemapOverlay = document.getElementById('sitemap-overlay');
   const closeSitemapBtn = document.getElementById('close-sitemap');
@@ -8,13 +15,15 @@
 
   // Détection de la page actuelle et ajout de la classe active
   const currentPage = decodeURIComponent(window.location.pathname.split('/').pop() || 'index.html');
+  const normalizedCurrentPage = normalizePath(currentPage);
+  
   const sitemapCards = document.querySelectorAll('.sitemap-card');
   
   sitemapCards.forEach(card => {
     const cardHref = card.getAttribute('href');
-    const decodedCardHref = decodeURIComponent(cardHref);
+    const normalizedCardHref = normalizePath(decodeURIComponent(cardHref));
     
-    if (cardHref === currentPage || decodedCardHref === currentPage) {
+    if (normalizedCardHref === normalizedCurrentPage) {
       card.classList.add('active');
     }
   });

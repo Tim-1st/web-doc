@@ -1,17 +1,25 @@
 // gestion des boutons active
 (() => {
+  const normalizePath = (path) => {
+    return path
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "")
+      .toLowerCase();
+  };
 
-  const currentPage = decodeURIComponent(window.location.pathname.split('/').pop()) || 'index.html';
+  const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+  const normalizedCurrentPage = normalizePath(decodeURIComponent(currentPage));
   
   const buttons = document.querySelectorAll('.catégories .boutton');
   
   buttons.forEach(button => {
     const href = button.getAttribute('href');
+    const normalizedHref = normalizePath(decodeURIComponent(href));
     
-    if (href === currentPage || 
-        (currentPage === 'index.html' && href === 'presentation.html') ||
-        (currentPage === '' && href === 'presentation.html') ||
-        (currentPage === 'podcast.html' && href === 'podcast.html')) {
+    if (normalizedHref === normalizedCurrentPage || 
+        (normalizedCurrentPage === 'index.html' && normalizedHref === 'presentation.html') ||
+        (normalizedCurrentPage === '' && normalizedHref === 'presentation.html') ||
+        (normalizedCurrentPage === 'podcast.html' && normalizedHref === 'podcast.html')) {
           
       const content = button.querySelector('.content');
       if (content) {
