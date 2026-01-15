@@ -220,7 +220,7 @@ h3 a {
 .catégories {
   position: fixed;
   top: 53%;
-  left: 20%;
+  left: 15rem;
   transform: translate(-50%, -50%);
 }
 
