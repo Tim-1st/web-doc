@@ -264,5 +264,9 @@ hr {
         margin-bottom: 0.7rem !important;
     }
 
+    .section-info {
+        display: none;
+    }
+
 }
 
