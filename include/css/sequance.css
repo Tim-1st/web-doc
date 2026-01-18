@@ -4,7 +4,6 @@
       top: 9rem;
       width: clamp(500px, calc(100vw - 35rem), 750px);
       transition: all 0.3s ease;
-       margin-bottom: 3rem;
     }
 
     .video-wrapper {
@@ -110,6 +109,7 @@
         max-width: none;
         margin: 2rem auto 0;
         padding: 0 1rem;
+        margin-bottom: 3rem;
       }
 
       .video-wrapper {
