@@ -400,7 +400,8 @@ footer a#share-btn:hover #share-icon {
 @media (max-width: 955px) {
 
   body {
-    overflow: auto;
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
   }
   
   header {
@@ -512,10 +513,6 @@ footer a#share-btn:hover #share-icon {
   .social-media {
     top: 1.7rem;
     right: 0rem;
-  }
-
-  body {
-    overflow: auto;
   }
 
 }
