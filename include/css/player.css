@@ -131,6 +131,7 @@ footer .left-links a {
 footer .right-buttons { 
   display: flex;
   justify-content: flex-end; 
+  gap: 2rem;
 }
 
 footer a#fullscreen-btn,
