@@ -446,6 +446,7 @@ html {
   footer {
     width: 30rem; 
     bottom: 0;
+    margin-top: 3rem;
   }
 
   footer a#fullscreen-btn,
