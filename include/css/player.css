@@ -236,37 +236,6 @@ footer a#share-btn:hover #share-icon {
 
 
 
-/* =========================
-   Emplacement des séquences a modifier
-  ========================= */
-
-#element_F0BFE707-FE80-D494-2C21-35EA24A2292A,
-#element_A1DDDACE-DA19-ECEB-50E0-3618375EDADB,
-#element_E1EC9EAC-B232-C44D-1BBF-361C86901923,
-#element_526578DB-716E-9C68-325B-361D31F923BE,
-#element_07EAF37B-9D34-0C70-4831-361DF07A3159 {
-  right: 5rem;
-  left: auto;
-  width: 658px;
-  height: 391px;
-  top: 9rem;
-  bottom: auto;
-  transition: right 0.3s ease, width 0.3s ease, height 0.3s ease;
-}
-
-#img_F0BFE707-FE80-D494-2C21-35EA24A2292A,
-#img_A1DDDACE-DA19-ECEB-50E0-3618375EDADB,
-#img_E1EC9EAC-B232-C44D-1BBF-361C86901923,
-#img_526578DB-716E-9C68-325B-361D31F923BE,
-#img_07EAF37B-9D34-0C70-4831-361DF07A3159 {
-  width: 658px;
-  height: 391px;
-  transition: right 0.3s ease, width 0.3s ease, height 0.3s ease;
-}
-
-
-
-
 
 /* =========================
    Social Media LinkedIn
@@ -389,25 +358,6 @@ footer a#share-btn:hover #share-icon {
 
 @media (max-width: 1120px) {
 
-  #element_F0BFE707-FE80-D494-2C21-35EA24A2292A,
-  #element_A1DDDACE-DA19-ECEB-50E0-3618375EDADB,
-  #element_E1EC9EAC-B232-C44D-1BBF-361C86901923,
-  #element_526578DB-716E-9C68-325B-361D31F923BE,
-  #element_07EAF37B-9D34-0C70-4831-361DF07A3159 {
-    right: 0rem;
-    width: 500px;
-    height: 281px;
-  }
-
-  #img_F0BFE707-FE80-D494-2C21-35EA24A2292A,
-  #img_A1DDDACE-DA19-ECEB-50E0-3618375EDADB,
-  #img_E1EC9EAC-B232-C44D-1BBF-361C86901923,
-  #img_526578DB-716E-9C68-325B-361D31F923BE,
-  #img_07EAF37B-9D34-0C70-4831-361DF07A3159 {
-    width: 500px;
-    height: 281px;
-  }
-
   .boutton {
     width: fit-content; 
   }
@@ -447,7 +397,7 @@ footer a#share-btn:hover #share-icon {
 }
 
 
-@media (max-width: 800px) {
+@media (max-width: 955px) {
 
   body {
     overflow: auto;
@@ -557,28 +507,6 @@ footer a#share-btn:hover #share-icon {
   
   #catégorie-ajust {
     width: auto;
-  }
-
-  #element_F0BFE707-FE80-D494-2C21-35EA24A2292A,
-  #element_A1DDDACE-DA19-ECEB-50E0-3618375EDADB,
-  #element_E1EC9EAC-B232-C44D-1BBF-361C86901923,
-  #element_526578DB-716E-9C68-325B-361D31F923BE,
-  #element_07EAF37B-9D34-0C70-4831-361DF07A3159 {
-    top: 22rem;
-    left: 50%;
-    right: auto;
-    transform: translateX(-50%);
-    width: 480px;
-    height: 270px;
-  }
-
-  #img_F0BFE707-FE80-D494-2C21-35EA24A2292A,
-  #img_A1DDDACE-DA19-ECEB-50E0-3618375EDADB,
-  #img_E1EC9EAC-B232-C44D-1BBF-361C86901923,
-  #img_526578DB-716E-9C68-325B-361D31F923BE,
-  #img_07EAF37B-9D34-0C70-4831-361DF07A3159 {
-    width: 480px;
-    height: 270px;
   }
 
   .social-media {

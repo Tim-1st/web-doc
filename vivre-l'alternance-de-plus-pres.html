@@ -9,9 +9,10 @@
   <meta name="description" content="Découvrez le web-documentaire interactif sur le métier de développeur full stack par Timéo DC. Explorez l'alternance, les mythes et la réalité du développement web.">
   
   <link rel="stylesheet" href="include/css/player.css">
-  <link rel="stylesheet" href="include/css/vivre-l'alternance-de-plus-pres.css">
+  <link rel="stylesheet" href="include/css/presentation.css">
   <link rel="stylesheet" href="include/css/sitemap.css">
   <link rel="stylesheet" href="include/css/overlay-credits.css">
+  <link rel="stylesheet" href="include/css/sequance.css">
 
 </head>
 
@@ -44,8 +45,11 @@
 
 
 
-      
-    <div class="catégories">
+
+
+
+  <!-- Catégories à gauche -->
+  <div class="catégories">
 
     <a class="boutton" href="presentation.html" alt="Présentation">
       <div class="cercle"></div>
@@ -75,7 +79,7 @@
       </div>
     </a>
 
-    <a class="boutton" href="conseil.html" alt="Conseil" alt="Conseil">
+    <a class="boutton" href="conseil.html" alt="Conseil">
       <div class="cercle"></div>
       <div class="content">
         <h2>Conseil</h2>
@@ -91,6 +95,45 @@
 
   </div>
 
+
+
+
+
+
+
+
+
+
+
+  <!-- Section vidéo avec chapitres -->
+  <div class="video-section">
+    <div class="video-wrapper">
+      <video id="mainVideo" controls>
+        <source src="include/sequances/L'alternance-de-plus-près.mp4" type="video/mp4">
+        Votre navigateur ne supporte pas la lecture de vidéos.
+      </video>
+    </div>
+
+    <div class="chapters">
+      <button class="chapter-btn" data-time="0">Théorie vs pratique</button>
+      <button class="chapter-btn" data-time="64">Responsabilités en alternance</button>
+      <button class="chapter-btn" data-time="102">Réalités de l’alternance</button>
+      <button class="chapter-btn" data-time="176">Équilibre études-entreprise</button>
+      <button class="chapter-btn" data-time="209">Réalité salariale</button>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+  <!-- LinkedIn social media (mobile) -->
   <div class="social-media">
     <a href="https://www.linkedin.com/in/timéo-dc/" target="_blank" rel="noopener noreferrer" class="linkedin-container">
       <img src="include/icon/linkedin-logo-transparent-free-png-1477946770.png" alt="Logo LinkedIn" loading="lazy">
@@ -109,7 +152,9 @@
 
 
 
-      
+
+
+
   <!-- Overlay Credits -->
   <div id="credits-overlay">
     <div class="overlay-content">
@@ -141,7 +186,7 @@
 
       <div class="section-intervenant">
         <p>Intervenant : <a href="https://www.linkedin.com/in/samad-abdul-developpeur-web-full-stack/" target="_blank" rel="noopener noreferrer">Samad Abdul</a></p>
-        <p>Droit d’utilisation de l’image accordé par Samad Abdul</p>
+        <p>Droit d'utilisation de l'image accordé par Samad Abdul</p>
       </div>
 
       <div class="section-info">
@@ -169,7 +214,9 @@
 
 
 
-      
+
+
+
   <!-- Overlay Sitemap -->
   <div id="sitemap-overlay">
     <div class="sitemap-content">
@@ -230,30 +277,43 @@
 
 
 
-      
-<footer>
-  <div class="left-links">
-    <a href="#credits">Crédits</a>
-    <a href="#sitemap">Plan du site</a>
-  </div>
 
-  <div class="right-buttons">
-    <a href="#" id="share-btn">
-      <span id="share-text">Partager</span>
-      <img src="include/icon/share.svg" alt="Icône de partage" id="share-icon">
-    </a>
 
-    <a href="#" id="fullscreen-btn">
-      <span id="fullscreen-text">Full screen</span>
-      <img src="include/icon/full-size.svg" alt="Icône plein écran" id="fullscreen-icon">
-    </a>
-  </div>
-</footer>
+  <!-- Footer -->
+  <footer>
+    <div class="left-links">
+      <a href="#credits">Crédits</a>
+      <a href="#sitemap">Plan du site</a>
+    </div>
+
+    <div class="right-buttons">
+      <a href="#" id="share-btn">
+        <span id="share-text">Partager</span>
+        <img src="include/icon/share.svg" alt="Icône de partage" id="share-icon">
+      </a>
+
+      <a href="#" id="fullscreen-btn">
+        <span id="fullscreen-text">Full screen</span>
+        <img src="include/icon/full-size.svg" alt="Icône plein écran" id="fullscreen-icon">
+      </a>
+    </div>
+  </footer>
+
+
+
+
+
+
+
+
+
+  
 
   <script src="include/js/button.js" defer></script>
   <script src="include/js/sitemap.js" defer></script>
   <script src="include/js/credits.js" defer></script>
   <script src="include/js/settings.js" defer></script>
+  <script src="include/js/sequance.js" defer></script>
 
 </body>
 </html>

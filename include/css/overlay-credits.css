@@ -87,14 +87,14 @@
 
 .overlay-content a {
   text-decoration: none;
-  color: #22427C;
+  color: white;
   font-weight: bold;
   padding-left: 1rem;
   margin-bottom: 0.5rem;
 }
 
 .overlay-content span {
-  color: #22427C;
+  color: white;
   font-weight: bold;
   padding-left: 1rem;
 }
