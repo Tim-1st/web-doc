@@ -514,6 +514,10 @@ footer a#share-btn:hover #share-icon {
     right: 0rem;
   }
 
+  body {
+    overflow: auto;
+  }
+
 }
 
 
