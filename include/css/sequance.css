@@ -109,7 +109,6 @@
         max-width: none;
         margin: 2rem auto 0;
         padding: 0 1rem;
-        margin-bottom: 3rem;
       }
 
       .video-wrapper {
@@ -135,6 +134,7 @@
     @media (max-width: 480px) {
       .video-section {
         max-width: 100%;
+        margin-bottom: 3rem;
       }
 
       .chapters {
