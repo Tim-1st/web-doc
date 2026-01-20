@@ -95,7 +95,7 @@ footer {
   width: 50rem;
   height: 2.3rem;
   background: #8599b5;
-  position: fixed;
+  position: absolute;
   right: 0;
   bottom: 0;
   border-top-left-radius: 15px;
@@ -500,7 +500,7 @@ footer a#share-btn:hover #share-icon {
 
 @media (max-width: 955px) {
 
-html {
+  html {
     overflow-y: auto !important;
     overflow-x: hidden !important;
   }
@@ -510,7 +510,7 @@ html {
     overflow-x: hidden !important;
     min-height: 100vh;
     position: relative;
-    padding-bottom: 3.5rem;
+    padding-bottom: 3rem;
   }
   
   header {
@@ -547,7 +547,9 @@ html {
 
   footer {
     width: 30rem; 
+    position: fixed;
     bottom: 0;
+    left: 0;
   }
 
   footer a#fullscreen-btn,
@@ -630,6 +632,6 @@ html {
 
 @media (max-width: 480px) {
   footer {
-    width: 20rem;
+    width: 100%;
   }
 }
