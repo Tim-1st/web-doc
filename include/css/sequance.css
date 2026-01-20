@@ -1,7 +1,8 @@
 .video-section {
   position: fixed;
   right: 5rem;
-  top: 9rem;
+  top: 50%;
+  transform: translateY(-50%);
   width: clamp(500px, calc(100vw - 35rem), 750px);
   transition: all 0.3s ease;
 }
@@ -121,6 +122,7 @@ video {
     top: auto;
     left: auto;
     right: auto;
+    transform: none;
     width: calc(100% - 2rem);
     max-width: none;
     margin: 2rem auto 0;
