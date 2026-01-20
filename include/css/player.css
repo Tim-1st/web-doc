@@ -508,10 +508,12 @@ footer a#share-btn:hover #share-icon {
 
   footer {
     width: 30rem; 
+    height: 2.3rem;
     position: fixed;
     bottom: 0;
     right: 0;
     margin: 0;
+    max-width: 100%;
   }
 
   footer a#fullscreen-btn,
@@ -600,5 +602,7 @@ footer a#share-btn:hover #share-icon {
 @media (max-width: 480px) {
   footer {
     width: 20rem;
+    height: 2.3rem;
+    max-width: 100%;
   }
 }
