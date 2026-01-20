@@ -1,9 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 
+
+
 body {
   font-family: "Ubuntu";
   overflow: hidden;
 }
+
+
+
 
 /* =========================
    Balises styles
@@ -55,6 +60,10 @@ a {
   text-decoration: none;
 }
 
+
+
+
+
 /* =========================
    Header
   ========================= */
@@ -75,6 +84,9 @@ header {
   margin: 0 auto; 
 }
 
+
+
+
 /* =========================
    Footer
   ========================= */
@@ -83,7 +95,7 @@ footer {
   width: 50rem;
   height: 2.3rem;
   background: #8599b5;
-  position: absolute;
+  position: fixed;
   right: 0;
   bottom: 0;
   border-top-left-radius: 15px;
@@ -160,6 +172,10 @@ footer a#share-btn:hover #share-icon {
   filter: brightness(0) invert(1);
 }
 
+
+
+
+
 /* =========================
    Catégories
   ========================= */
@@ -215,6 +231,11 @@ footer a#share-btn:hover #share-icon {
   transform: scale(1.05);
   box-shadow: 0 0 20px rgba(34, 66, 124, 0.6);
 }
+
+
+
+
+
 
 /* =========================
    Social Media LinkedIn
@@ -322,6 +343,15 @@ footer a#share-btn:hover #share-icon {
   }
 }
 
+
+
+
+
+
+
+
+
+
 /* =========================
    MEDIA QUERIES - GRANDS ÉCRANS
   ========================= */
@@ -414,6 +444,15 @@ footer a#share-btn:hover #share-icon {
   }
 }
 
+
+
+
+
+
+
+
+
+
 /* =========================
    MEDIA QUERIES - PETITS ÉCRANS
   ========================= */
@@ -458,9 +497,10 @@ footer a#share-btn:hover #share-icon {
 
 }
 
+
 @media (max-width: 955px) {
 
-  html {
+html {
     overflow-y: auto !important;
     overflow-x: hidden !important;
   }
@@ -470,9 +510,6 @@ footer a#share-btn:hover #share-icon {
     overflow-x: hidden !important;
     min-height: 100vh;
     position: relative;
-    padding-bottom: 6rem;
-    margin-bottom: 0;
-    background-color: white;
   }
   
   header {
@@ -509,13 +546,7 @@ footer a#share-btn:hover #share-icon {
 
   footer {
     width: 30rem; 
-    height: 2.3rem;
-    position: fixed;
     bottom: 0;
-    right: 0;
-    margin: 0;
-    max-width: 100%;
-    border-top-left-radius: 0;
   }
 
   footer a#fullscreen-btn,
@@ -529,12 +560,6 @@ footer a#share-btn:hover #share-icon {
   #share-text {
     display: none; 
     opacity: 0;  
-  }
-  
-  #fullscreen-icon,
-  #share-icon {
-    width: 1rem;
-    height: auto;
   }
 
   .catégories {
@@ -601,9 +626,9 @@ footer a#share-btn:hover #share-icon {
 
 }
 
+
 @media (max-width: 480px) {
   footer {
     width: 20rem;
-    height: 2.3rem;
   }
 }
