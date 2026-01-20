@@ -472,6 +472,7 @@ footer a#share-btn:hover #share-icon {
     position: relative;
     padding-bottom: 6rem;
     margin-bottom: 0;
+    background-color: white;
   }
   
   header {
