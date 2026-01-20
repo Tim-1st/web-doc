@@ -500,7 +500,7 @@ footer a#share-btn:hover #share-icon {
 
 @media (max-width: 955px) {
 
-  html {
+html {
     overflow-y: auto !important;
     overflow-x: hidden !important;
   }
@@ -510,7 +510,7 @@ footer a#share-btn:hover #share-icon {
     overflow-x: hidden !important;
     min-height: 100vh;
     position: relative;
-    padding-bottom: 3rem;
+    padding-bottom: 6rem;
   }
   
   header {
@@ -547,9 +547,7 @@ footer a#share-btn:hover #share-icon {
 
   footer {
     width: 30rem; 
-    position: fixed;
     bottom: 0;
-    left: 0;
   }
 
   footer a#fullscreen-btn,
@@ -632,6 +630,6 @@ footer a#share-btn:hover #share-icon {
 
 @media (max-width: 480px) {
   footer {
-    width: 100%;
+    width: 20rem;
   }
 }
