@@ -515,6 +515,7 @@ footer a#share-btn:hover #share-icon {
     right: 0;
     margin: 0;
     max-width: 100%;
+    border-top-left-radius: 0;
   }
 
   footer a#fullscreen-btn,
@@ -605,5 +606,6 @@ footer a#share-btn:hover #share-icon {
     width: 20rem;
     height: 2.3rem;
     max-width: 100%;
+    border-top-left-radius: 0;
   }
 }
