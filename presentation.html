@@ -108,15 +108,14 @@
   <!-- Section vidéo avec chapitres -->
   <div class="video-section">
     <div class="video-wrapper">
-      <video id="mainVideo" controls>
-        <source src="include/sequances/Présentation.mp4" type="video/mp4">
-        Votre navigateur ne supporte pas la lecture de vidéos.
-      </video>
+      <div class="video-container">
+        <div id="mainVideo"></div>
+      </div>
     </div>
 
     <div class="chapters">
       <button class="chapter-btn" data-time="0">La présentation</button>
-      <button class="chapter-btn" data-time="23">Votre activité</button>
+      <button class="chapter-btn" data-time="23">Le rôle</button>
       <button class="chapter-btn" data-time="34">Les missions</button>
       <button class="chapter-btn" data-time="49">Parcours scolaire</button>
       <button class="chapter-btn" data-time="72">Témoignage</button>
@@ -199,7 +198,7 @@
         <div id="logos-container">
           <img src="include/logos/CY-IUT_coul240.png" alt="Logo CY-IUT">
           <img src="include/logos/logo 2.png" alt="Logo partenaire">
-          <img src="include/logos/cy-cergy-paris-universite-coul_1611572232688-png-3906356523" alt="Logo CY Cergy Paris Université">
+          <img src="include/logos/cy-cergy-paris-universite-coul_1611572234688-png-3906356523" alt="Logo CY Cergy Paris Université">
         </div>
 
         <button id="close-overlay">Fermer</button>
@@ -313,7 +312,7 @@
   <script src="include/js/sitemap.js" defer></script>
   <script src="include/js/credits.js" defer></script>
   <script src="include/js/settings.js" defer></script>
-  <script src="include/js/sequance.js" defer></script>
+  <script src="include/js/sequances/presentation.js" defer></script>
 
 </body>
 </html>
