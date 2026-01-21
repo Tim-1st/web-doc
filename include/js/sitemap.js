@@ -10,6 +10,7 @@
   const sitemapLink = document.querySelector('footer .left-links a[href="#sitemap"]');
   const sitemapOverlay = document.getElementById('sitemap-overlay');
   const closeSitemapBtn = document.getElementById('close-sitemap');
+  const creditsOverlay = document.getElementById('credits-overlay');
 
   let isSitemapOpen = false;
 
@@ -29,6 +30,11 @@
   });
 
   const openSitemap = () => {
+    // Fermer les crédits si ouverts
+    if (creditsOverlay && creditsOverlay.classList.contains('open')) {
+      creditsOverlay.classList.remove('open');
+      creditsOverlay.style.transform = 'translateX(100%)';
+    }
     sitemapOverlay.classList.add('open');
     isSitemapOpen = true;
   };

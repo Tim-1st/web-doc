@@ -3,10 +3,15 @@
   const creditsLink = document.querySelector('footer .left-links a[href="#credits"]');
   const creditsOverlay = document.getElementById('credits-overlay');
   const closeOverlayBtn = document.getElementById('close-overlay');
+  const sitemapOverlay = document.getElementById('sitemap-overlay');
 
   let isOverlayOpen = false;
 
   const openOverlay = () => {
+    // Fermer le sitemap si ouvert
+    if (sitemapOverlay && sitemapOverlay.classList.contains('open')) {
+      sitemapOverlay.classList.remove('open');
+    }
     creditsOverlay.classList.add('open');
     creditsOverlay.style.transform = 'translateX(0)';
     isOverlayOpen = true;
