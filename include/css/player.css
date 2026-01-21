@@ -510,6 +510,7 @@ html {
     overflow-x: hidden !important;
     min-height: 100vh;
     position: relative;
+    padding-bottom: 6rem;
   }
   
   header {
@@ -546,7 +547,7 @@ html {
 
   footer {
     width: 30rem; 
-    position: relative;
+    bottom: 0;
   }
 
   footer a#fullscreen-btn,
