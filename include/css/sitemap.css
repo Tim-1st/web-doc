@@ -1,43 +1,43 @@
+/* =========================
+   Overlay Sitemap
+  ========================= */
+
 #sitemap-overlay {
   position: fixed;
-  inset: 0;
+  top: 0;
+  left: 0;
   width: 100%;
-  height: 100%;
+  height: 0;
   background: rgba(255, 255, 255, 0.7);
   z-index: 10000;
-
+  transform: translateY(-100%);
+  transition: transform 0.4s ease-in-out, height 0.4s ease-in-out;
   display: flex;
   justify-content: center;
-  align-items: center;
-
-  transform: translateY(-100%);
-  transition: transform 0.4s ease-in-out;
-
+  align-items: flex-start;
   backdrop-filter: blur(20px) saturate(180%);
   -webkit-backdrop-filter: blur(20px) saturate(180%);
-
-  overflow-y: auto;
+  overflow-y: hidden;
   overflow-x: hidden;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  overscroll-behavior: contain;
 }
 
 #sitemap-overlay.open {
   transform: translateY(0);
+  height: 100%;
 }
 
 .sitemap-content {
   width: 90%;
   max-width: 1200px;
-  max-height: 90vh;
-
-  padding: 0rem 3rem 3rem 3rem;
+  padding: 2rem;
   color: #22427C;
-
-  background: transparent;
-  overflow-y: auto;
-
   opacity: 0;
   transform: translateY(-20px);
   transition: opacity 0.3s ease 0.2s, transform 0.3s ease 0.2s;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
 }
 
 #sitemap-overlay.open .sitemap-content {
@@ -49,54 +49,56 @@
   font-size: 2.5rem;
   text-align: center;
   margin-bottom: 3rem;
-  font-weight: bold;
   color: #22427C;
+  font-weight: bold;
   text-shadow: 0 2px 10px rgba(34, 66, 124, 0.2);
 }
-
-/* =========================
-   Grille Sitemap
-========================= */
 
 .sitemap-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
   gap: 1.5rem;
-
-  max-width: 700px;
-  margin: 0 auto 1.5rem;
+  margin-bottom: 1.5rem;
   padding: 1rem;
-
-  justify-items: center; /* centrage des bulles */
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  justify-items: center;
 }
 
-/* =========================
-   Cartes (Bulles)
-========================= */
-
 .sitemap-card {
-
-  width: clamp(140px, 15vw, 180px);
-  aspect-ratio: 1;
-
   background: rgba(34, 66, 124, 0.08);
   border-radius: 69% 31% 70% 30% / 30% 68% 32% 70%;
   padding: 1.2rem;
-
   text-decoration: none;
   color: #22427C;
-
+  transition: all 0.5s ease;
   border: 2px solid rgba(34, 66, 124, 0.15);
   cursor: pointer;
-
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  aspect-ratio: 1;
   display: flex;
   align-items: center;
   justify-content: center;
+  max-width: 200px;
+  max-height: 200px;
+}
 
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+.sitemap-card.active {
+  background: rgba(34, 66, 124, 0.25);
+  border-color: #22427C;
+  box-shadow: 0 8px 25px rgba(34, 66, 124, 0.3);
+  transform: scale(1.05);
+}
 
-  transition: all 0.5s ease;
+.sitemap-card.active .sitemap-icon {
+  transform: scale(1.15);
+}
+
+.sitemap-card.active h3 {
+  font-weight: 900;
 }
 
 .sitemap-card:hover {
@@ -107,20 +109,24 @@
   border-radius: 31% 69% 30% 70% / 68% 30% 70% 32%;
 }
 
-.sitemap-card.active {
-  background: rgba(34, 66, 124, 0.25);
-  border-color: #22427C;
-  box-shadow: 0 8px 25px rgba(34, 66, 124, 0.3);
-  transform: scale(1.05);
+.sitemap-card.active:hover {
+  transform: translateY(-5px) rotate(5deg) scale(1.05);
 }
 
 .sitemap-card-inner {
   text-align: center;
 }
 
+.sitemap-icon {
+  font-size: 2rem;
+  margin-bottom: 0.6rem;
+  transition: transform 0.3s ease;
+}
+
 .sitemap-card h3 {
   font-size: 0.9rem;
   margin-bottom: 0.3rem;
+  color: #22427C;
   font-weight: bold;
 }
 
@@ -130,48 +136,72 @@
   line-height: 1.25;
 }
 
-/* =========================
-   Bouton fermer
-========================= */
-
 #close-sitemap {
   display: block;
-  margin: 1.5rem auto 0;
+  margin: 1rem auto 0;
   padding: 0.7rem 1.8rem;
-
   background-color: #22427C;
   color: white;
   border: none;
   border-radius: 8px;
-
+  cursor: pointer;
   font-size: 0.95rem;
   font-weight: bold;
-  cursor: pointer;
-
   transition: all 0.3s ease;
   box-shadow: 0 4px 15px rgba(34, 66, 124, 0.3);
 }
 
 #close-sitemap:hover {
   background-color: #56739a;
+  color: white;
   transform: scale(1.05);
   box-shadow: 0 6px 20px rgba(34, 66, 124, 0.4);
 }
 
-/* =========================
-   Responsive
-========================= */
 
+
+
+/* Responsive pour la sitemap */
 @media (max-width: 1024px) {
   .sitemap-grid {
     grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
     max-width: 420px;
+    gap: 1.2rem;
+  }
+  
+  .sitemap-card {
+    padding: 1.1rem;
+  }
+  
+  .sitemap-icon {
+    font-size: 1.8rem;
+  }
+  
+  .sitemap-card h3 {
+    font-size: 0.88rem;
+    text-align: center;
+  }
+  
+  .sitemap-card p {
+    font-size: 0.7rem;
   }
 }
 
 @media (max-width: 800px) {
+  #sitemap-overlay {
+    overflow-y: auto;
+    align-items: flex-start;
+    overscroll-behavior: contain;
+    -webkit-overflow-scrolling: touch;
+  }
+
   .sitemap-content {
     padding: 2rem 1.5rem;
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+    max-height: none;
+    overflow-y: visible;
   }
 
   .sitemap-content h2 {
@@ -181,23 +211,39 @@
 
   .sitemap-grid {
     grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 1.5rem;
     max-width: 180px;
-    gap: 0.8rem;
+    margin-bottom: 1rem;
   }
 
   .sitemap-card {
-    width: 100%;
+    width: 180px;
+    height: 180px;
+    max-width: 180px;
+    max-height: 180px;
+    padding: 0.8rem;
+  }
+
+  .sitemap-icon {
+    font-size: 1.5rem;
+    margin-bottom: 0.3rem;
   }
 
   .sitemap-card h3 {
     font-size: 0.78rem;
+    margin-bottom: 0.2rem;
+    text-align: center;
   }
 
   .sitemap-card p {
     font-size: 0.65rem;
+    line-height: 1.15;
   }
-
+  
   #close-sitemap {
+    margin-top: 0.8rem;
+    margin-bottom: 1rem;
     padding: 0.55rem 1.3rem;
     font-size: 0.8rem;
   }
