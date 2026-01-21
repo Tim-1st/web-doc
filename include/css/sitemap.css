@@ -38,6 +38,8 @@
   transition: opacity 0.3s ease 0.2s, transform 0.3s ease 0.2s;
   padding-top: 3rem;
   padding-bottom: 3rem;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #sitemap-overlay.open .sitemap-content {
@@ -164,8 +166,86 @@
 
 
 
-
 /* Responsive pour la sitemap */
+
+/* Grands écrans (1920px+) */
+@media (min-width: 1920px) {
+  .sitemap-content {
+    max-width: 1400px;
+    padding: 4rem 2rem;
+  }
+
+  .sitemap-content h2 {
+    font-size: 3rem;
+    margin-bottom: 4rem;
+  }
+
+  .sitemap-grid {
+    gap: 3rem;
+    max-width: 1200px;
+  }
+
+  .sitemap-card {
+    width: 220px;
+    height: 220px;
+    min-width: 220px;
+    min-height: 220px;
+    padding: 1.5rem;
+  }
+
+  .sitemap-icon {
+    font-size: 2.5rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .sitemap-card h3 {
+    font-size: 1.1rem;
+  }
+
+  .sitemap-card p {
+    font-size: 0.85rem;
+  }
+}
+
+/* Très grands écrans (2560px+) */
+@media (min-width: 2560px) {
+  .sitemap-content {
+    max-width: 1600px;
+    padding: 5rem 3rem;
+  }
+
+  .sitemap-content h2 {
+    font-size: 3.5rem;
+    margin-bottom: 5rem;
+  }
+
+  .sitemap-grid {
+    gap: 3.5rem;
+    max-width: 1400px;
+  }
+
+  .sitemap-card {
+    width: 260px;
+    height: 260px;
+    min-width: 260px;
+    min-height: 260px;
+    padding: 1.8rem;
+  }
+
+  .sitemap-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+
+  .sitemap-card h3 {
+    font-size: 1.3rem;
+  }
+
+  .sitemap-card p {
+    font-size: 0.95rem;
+  }
+}
+
 @media (max-width: 1024px) {
   .sitemap-grid {
     grid-template-columns: repeat(2, 1fr);

@@ -41,6 +41,179 @@ const searchDatabase = [
     page: 'index.html',
     category: 'main',
     content: ['Accueil', 'Web-Doc Développeur Full Stack', 'Timéo DC']
+  },
+  // Chapitres - Présentation
+  {
+    title: 'La présentation',
+    page: 'presentation.html',
+    category: 'chapter',
+    parentCategory: 'Présentation',
+    chapterTime: 0,
+    content: ['La présentation', 'Présentation']
+  },
+  {
+    title: 'Le rôle',
+    page: 'presentation.html',
+    category: 'chapter',
+    parentCategory: 'Présentation',
+    chapterTime: 23,
+    content: ['Le rôle', 'Présentation']
+  },
+  {
+    title: 'Les missions',
+    page: 'presentation.html',
+    category: 'chapter',
+    parentCategory: 'Présentation',
+    chapterTime: 34,
+    content: ['Les missions', 'Présentation']
+  },
+  {
+    title: 'Parcours scolaire',
+    page: 'presentation.html',
+    category: 'chapter',
+    parentCategory: 'Présentation',
+    chapterTime: 49,
+    content: ['Parcours scolaire', 'Présentation', 'études']
+  },
+  {
+    title: 'Témoignage',
+    page: 'presentation.html',
+    category: 'chapter',
+    parentCategory: 'Présentation',
+    chapterTime: 72,
+    content: ['Témoignage', 'Présentation']
+  },
+  // Chapitres - Vivre l'alternance
+  {
+    title: 'Théorie vs pratique',
+    page: 'vivre-l\'alternance-de-plus-pres.html',
+    category: 'chapter',
+    parentCategory: 'Vivre l\'alternance',
+    chapterTime: 0,
+    content: ['Théorie', 'pratique', 'alternance']
+  },
+  {
+    title: 'Responsabilités en alternance',
+    page: 'vivre-l\'alternance-de-plus-pres.html',
+    category: 'chapter',
+    parentCategory: 'Vivre l\'alternance',
+    chapterTime: 64,
+    content: ['Responsabilités', 'alternance']
+  },
+  {
+    title: 'Réalités de l\'alternance',
+    page: 'vivre-l\'alternance-de-plus-pres.html',
+    category: 'chapter',
+    parentCategory: 'Vivre l\'alternance',
+    chapterTime: 102,
+    content: ['Réalités', 'alternance']
+  },
+  {
+    title: 'Équilibre études-entreprise',
+    page: 'vivre-l\'alternance-de-plus-pres.html',
+    category: 'chapter',
+    parentCategory: 'Vivre l\'alternance',
+    chapterTime: 176,
+    content: ['Équilibre', 'études', 'entreprise', 'alternance']
+  },
+  {
+    title: 'Réalité salariale',
+    page: 'vivre-l\'alternance-de-plus-pres.html',
+    category: 'chapter',
+    parentCategory: 'Vivre l\'alternance',
+    chapterTime: 209,
+    content: ['Réalité', 'salariale', 'alternance', 'salaire']
+  },
+  // Chapitres - La face cachée
+  {
+    title: 'Temps de codage',
+    page: 'la-face-cachee-d\'un-developpeur.html',
+    category: 'chapter',
+    parentCategory: 'La face cachée',
+    chapterTime: 0,
+    content: ['Temps', 'codage', 'développeur']
+  },
+  {
+    title: 'Autres postes',
+    page: 'la-face-cachee-d\'un-developpeur.html',
+    category: 'chapter',
+    parentCategory: 'La face cachée',
+    chapterTime: 47,
+    content: ['Autres', 'postes', 'développeur']
+  },
+  {
+    title: 'Aspect répétitif',
+    page: 'la-face-cachee-d\'un-developpeur.html',
+    category: 'chapter',
+    parentCategory: 'La face cachée',
+    chapterTime: 65,
+    content: ['Aspect', 'répétitif', 'développeur']
+  },
+  // Chapitres - Un métier au cœur des mythes
+  {
+    title: 'L\'anglais et les maths !',
+    page: 'un-metier-au-coeur-des-mythes.html',
+    category: 'chapter',
+    parentCategory: 'Un métier au cœur des mythes',
+    chapterTime: 0,
+    content: ['anglais', 'maths', 'mathématiques', 'développeur']
+  },
+  {
+    title: 'Le par cœur !',
+    page: 'un-metier-au-coeur-des-mythes.html',
+    category: 'chapter',
+    parentCategory: 'Un métier au cœur des mythes',
+    chapterTime: 45,
+    content: ['par cœur', 'mémorisation', 'mythes']
+  },
+  {
+    title: '0 Erreures !',
+    page: 'un-metier-au-coeur-des-mythes.html',
+    category: 'chapter',
+    parentCategory: 'Un métier au cœur des mythes',
+    chapterTime: 92,
+    content: ['erreurs', 'bugs', 'développement']
+  },
+  {
+    title: 'Pour les introvertis !',
+    page: 'un-metier-au-coeur-des-mythes.html',
+    category: 'chapter',
+    parentCategory: 'Un métier au cœur des mythes',
+    chapterTime: 129,
+    content: ['introvertis', 'sociabilité', 'communication']
+  },
+  {
+    title: 'L\'IA va tout remplacer !',
+    page: 'un-metier-au-coeur-des-mythes.html',
+    category: 'chapter',
+    parentCategory: 'Un métier au cœur des mythes',
+    chapterTime: 158,
+    content: ['IA', 'intelligence artificielle', 'automatisation']
+  },
+  // Chapitres - Conseil
+  {
+    title: 'Pour les débutants',
+    page: 'conseil.html',
+    category: 'chapter',
+    parentCategory: 'Conseil',
+    chapterTime: 0,
+    content: ['débutants', 'conseil']
+  },
+  {
+    title: 'Pour les alternants',
+    page: 'conseil.html',
+    category: 'chapter',
+    parentCategory: 'Conseil',
+    chapterTime: 45,
+    content: ['alternants', 'alternance', 'conseil']
+  },
+  {
+    title: 'Pour les futures développeurs',
+    page: 'conseil.html',
+    category: 'chapter',
+    parentCategory: 'Conseil',
+    chapterTime: 130,
+    content: ['futures', 'développeurs', 'conseil']
   }
 ];
 
@@ -73,7 +246,7 @@ class SearchBar {
     this.input = document.createElement('input');
     this.input.type = 'text';
     this.input.id = 'search-input';
-    this.input.placeholder = 'Chercher une catégorie...';
+    this.input.placeholder = 'Chercher une catégorie ou un chapitre...';
     this.input.className = 'search-input';
 
     // Créer le conteneur de résultats
@@ -175,10 +348,13 @@ class SearchBar {
     let html = '<div class="search-results-list">';
     
     results.forEach(result => {
+      const subtitle = result.category === 'main' ? 'Catégorie principale' : `Chapitre • ${result.parentCategory}`;
+      const chapterTime = result.chapterTime !== undefined ? `?chapter=${result.chapterTime}` : '';
+      
       html += `
-        <div class="search-result-item" data-page="${result.page}">
+        <div class="search-result-item" data-page="${result.page}" data-chapter="${result.chapterTime || ''}">
           <div class="search-result-title">${this.highlightQuery(result.title)}</div>
-          <div class="search-result-subtitle">${result.category === 'main' ? 'Catégorie principale' : 'Section'}</div>
+          <div class="search-result-subtitle">${subtitle}</div>
         </div>
       `;
     });
@@ -191,7 +367,8 @@ class SearchBar {
     this.resultsContainer.querySelectorAll('.search-result-item').forEach(item => {
       item.addEventListener('click', (e) => {
         const page = item.getAttribute('data-page');
-        this.navigateToPage(page);
+        const chapter = item.getAttribute('data-chapter');
+        this.navigateToPage(page, chapter);
       });
     });
   }
@@ -204,23 +381,69 @@ class SearchBar {
     return text.replace(regex, '<strong>$1</strong>');
   }
 
-  navigateToPage(page) {
+  navigateToPage(page, chapter = '') {
     // Déterminer l'URL actuelle
     const currentPage = window.location.pathname.split('/').pop() || 'index.html';
     
     if (currentPage === page || (!currentPage && page === 'index.html')) {
-      // On est déjà sur la page, fermer la barre
+      // On est déjà sur la page
+      if (chapter) {
+        // Si c'est un chapitre, chercher le bouton et déclencher un clic
+        this.navigateToChapter(parseFloat(chapter));
+      }
+      
+      // Fermer la barre
       this.input.value = '';
       this.resultsContainer.innerHTML = '';
       this.resultsContainer.style.display = 'none';
     } else {
       // Naviguer vers la page
-      window.location.href = page;
+      if (chapter) {
+        window.location.href = `${page}?chapter=${chapter}`;
+      } else {
+        window.location.href = page;
+      }
     }
+  }
+
+  navigateToChapter(chapterTime) {
+    // Attendre un peu pour que le lecteur soit prêt
+    const maxAttempts = 20;
+    let attempts = 0;
+
+    const checkAndSeek = () => {
+      attempts++;
+      
+      // Vérifier si le lecteur YouTube est prêt
+      if (typeof player !== 'undefined' && player && typeof player.seekTo === 'function') {
+        try {
+          player.seekTo(chapterTime, true);
+          player.playVideo();
+        } catch (e) {
+          console.log('Impossible de naviguer au chapitre');
+        }
+      } else if (attempts < maxAttempts) {
+        // Réessayer dans 100ms
+        setTimeout(checkAndSeek, 100);
+      }
+    };
+
+    checkAndSeek();
   }
 }
 
 // Initialiser quand le DOM est prêt
 document.addEventListener('DOMContentLoaded', () => {
-  new SearchBar();
+  const searchBar = new SearchBar();
+  
+  // Vérifier si un chapitre est spécifié dans l'URL
+  const params = new URLSearchParams(window.location.search);
+  const chapter = params.get('chapter');
+  
+  if (chapter) {
+    // Attendre que le lecteur soit prêt et naviguer au chapitre
+    searchBar.navigateToChapter(parseFloat(chapter));
+    // Nettoyer l'URL
+    window.history.replaceState({}, document.title, window.location.pathname);
+  }
 });
