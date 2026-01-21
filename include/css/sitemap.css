@@ -36,10 +36,9 @@
   opacity: 0;
   transform: translateY(-20px);
   transition: opacity 0.3s ease 0.2s, transform 0.3s ease 0.2s;
-  padding-top: 3rem;
-  padding-bottom: 3rem;
   margin-left: auto;
   margin-right: auto;
+  padding: 0rem 4rem 4rem 4rem;
 }
 
 #sitemap-overlay.open .sitemap-content {
