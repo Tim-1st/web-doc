@@ -506,17 +506,11 @@ html {
   }
 
   body {
-    display: flex;
-    flex-direction: column;
-    overflow-y: auto;
-    overflow-x: hidden;
-    
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+    min-height: 100vh;
+    position: relative;
   }
-
-  .catégories {
-  flex: 1;
-}
-
   
   header {
     justify-content: flex-start;
