@@ -101,6 +101,10 @@ video {
     right: 6rem;
   }
 
+  .chapters {
+    gap: 1rem;
+  }
+
   .chapter-btn {
     font-size: 1rem;
     padding: 0.8rem 1.4rem;
@@ -111,6 +115,10 @@ video {
   .video-section {
     width: clamp(800px, calc(100vw - 35rem), 1200px);
     right: 8rem;
+  }
+
+  .chapters {
+    gap: 1.5rem;
   }
 
   .chapter-btn {
