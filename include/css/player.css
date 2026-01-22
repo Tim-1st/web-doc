@@ -229,7 +229,7 @@ footer a#share-btn:hover #share-icon {
 .content.active-page {
   background: rgba(34, 66, 124, 1);
   transform: scale(1.05);
-  box-shadow: 0 0 20px rgba(34, 66, 124, 0.6);
+  box-shadow: 0 0 8px rgba(34, 66, 124, 0.3);
 }
 
 
@@ -521,16 +521,17 @@ html {
     display: flex;
     flex-direction: column; 
     justify-content: center; 
-    align-items: flex-start; 
-    text-align: left; 
+    align-items: center; 
+    text-align: center; 
     margin: 0; 
-    padding-left: 1rem; 
+    padding-left: 0; 
+    width: 100%;
   }
 
   h1 {
     font-size: 1.2rem;
-    width: 20rem;
-    text-align: left;
+    width: auto;
+    text-align: center;
   }
 
   h2 {
