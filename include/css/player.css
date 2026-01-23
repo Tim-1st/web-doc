@@ -172,7 +172,7 @@ footer a#share-btn:hover #share-icon {
 
 .catégories {
   position: fixed;
-  top: 53%;
+  top: 50%;
   left: 15rem;
   transform: translate(-50%, -50%);
 }
