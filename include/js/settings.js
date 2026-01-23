@@ -2,31 +2,22 @@
 document.getElementById('fullscreen-btn').addEventListener('click', function (e) {
   e.preventDefault(); 
   
-  const isMobile = window.innerWidth <= 800;
-  const targetElement = isMobile 
-    ? document.getElementById('mainVideo') 
-    : document.documentElement;
-
   if (!document.fullscreenElement &&  
       !document.webkitFullscreenElement && 
       !document.mozFullScreenElement && 
       !document.msFullscreenElement) {
 
-    if (targetElement.requestFullscreen) {
-      targetElement.requestFullscreen();
-    } else if (targetElement.webkitRequestFullscreen) { 
-      targetElement.webkitRequestFullscreen();
-    } else if (targetElement.mozRequestFullScreen) { 
-      targetElement.mozRequestFullScreen();
-    } else if (targetElement.msRequestFullscreen) { 
-      targetElement.msRequestFullscreen();
+    if (document.documentElement.requestFullscreen) {
+      document.documentElement.requestFullscreen();
+    } else if (document.documentElement.webkitRequestFullscreen) { 
+      document.documentElement.webkitRequestFullscreen();
+    } else if (document.documentElement.mozRequestFullScreen) { 
+      document.documentElement.mozRequestFullScreen();
+    } else if (document.documentElement.msRequestFullscreen) { 
+      document.documentElement.msRequestFullscreen();
     }
-    
-    if (isMobile && screen.orientation && screen.orientation.lock) {
-      screen.orientation.lock('landscape').catch(() => {}); 
-    }
-
   } else {
+    
     if (document.exitFullscreen) {
       document.exitFullscreen();
     } else if (document.webkitExitFullscreen) { 
@@ -38,6 +29,8 @@ document.getElementById('fullscreen-btn').addEventListener('click', function (e)
     }
   }
 });
+
+
 
 
 // Gestion de l'option share
