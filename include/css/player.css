@@ -121,6 +121,7 @@ footer a:hover {
 footer .left-links { 
   display: flex;
   justify-content: flex-start; 
+  align-items: center;
   gap: 2rem; 
 }
 
@@ -131,6 +132,7 @@ footer .left-links a {
 footer .right-buttons { 
   display: flex;
   justify-content: flex-end; 
+  align-items: center;
   gap: 2rem;
 }
 
@@ -237,117 +239,6 @@ footer a#share-btn:hover #share-icon {
 
 
 
-/* =========================
-   Social Media LinkedIn
-  ========================= */
-
-.social-media {
-  position: fixed;
-  top: 2rem;
-  right: 0;
-  z-index: 1;
-  bottom: 0;
-}
-
-.linkedin-container {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  cursor: pointer;
-  width: 4rem;
-}
-
-.linkedin-container img {
-  width: 4rem;
-  height: 4rem;
-  margin: 0;
-  transition: transform 0.4s ease;
-  animation: gentle-pulse 3s ease-in-out infinite;
-}
-
-.linkedin-container:hover img {
-  transform: scale(1.05);
-  animation: none;
-}
-
-.linkedin-band {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
-}
-
-.linkedin-container:hover .linkedin-band {
-  max-height: 400px;
-}
-
-.linkedin-text-wrapper {
-  position: relative;
-  padding: 0.6rem;
-  opacity: 0;
-  transform: translateY(-10px);
-  transition: opacity 0.2s ease, transform 0.3s ease;
-}
-
-.linkedin-container:hover .linkedin-text-wrapper {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.linkedin-text {
-  font-size: 1.2rem;
-  writing-mode: vertical-rl;
-  text-orientation: upright;
-  letter-spacing: 0.3rem;
-  position: relative;
-  color: #22427C;
-}
-
-.linkedin-text-wrapper::before,
-.linkedin-text-wrapper::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  width: 2px;
-  background: rgba(34, 66, 124, 0.4);
-  transform: scaleY(0);
-  transform-origin: top;
-  transition: transform 0.4s ease;
-}
-
-.linkedin-text-wrapper::before { 
-  left: 0; 
-}
-
-.linkedin-text-wrapper::after { 
-  right: 0; 
-}
-
-.linkedin-container:hover .linkedin-text-wrapper::before,
-.linkedin-container:hover .linkedin-text-wrapper::after {
-  transform: scaleY(1);
-}
-
-.linkedin-container:hover .linkedin-text::before {
-  opacity: 1;
-  transform: scale(1);
-}
-
-@keyframes gentle-pulse {
-  0%, 100% { 
-    transform: scale(1); 
-  }
-  50% { 
-    transform: scale(1.02); 
-  }
-}
-
-
-
-
-
-
 
 
 
@@ -389,15 +280,6 @@ footer a#share-btn:hover #share-icon {
   #share-text {
     font-size: 12px;
   }
-
-  .linkedin-container img {
-    width: 5rem;
-    height: 5rem;
-  }
-
-  .linkedin-text {
-    font-size: 1.4rem;
-  }
 }
 
 @media (min-width: 2560px) {
@@ -433,15 +315,6 @@ footer a#share-btn:hover #share-icon {
   #share-text {
     font-size: 14px;
   }
-
-  .linkedin-container img {
-    width: 6rem;
-    height: 6rem;
-  }
-
-  .linkedin-text {
-    font-size: 1.6rem;
-  }
 }
 
 
@@ -461,38 +334,6 @@ footer a#share-btn:hover #share-icon {
 
   .boutton {
     width: fit-content; 
-  }
-
-  .linkedin-container img {
-    animation: none;
-    transform: none;
-    transition: none;
-  }
-
-  .linkedin-container:hover img {
-    transform: none;
-    animation: none;
-  }
-
-  .linkedin-container:hover .linkedin-band {
-    max-height: 0;
-  }
-
-  .linkedin-container:hover .linkedin-text-wrapper {
-    opacity: 0;
-    transform: translateY(-10px);
-  }
-
-  .linkedin-container:hover .linkedin-text-wrapper::before,
-  .linkedin-container:hover .linkedin-text-wrapper::after {
-    transform: scaleY(0);
-  }
-
-  .linkedin-band,
-  .linkedin-text-wrapper,
-  .linkedin-text-wrapper::before,
-  .linkedin-text-wrapper::after {
-    transition: none;
   }
 
 }
@@ -620,10 +461,6 @@ html {
   
   #catégorie-ajust {
     width: auto;
-  }
-
-  .social-media {
-    display: none;
   }
 
 }
