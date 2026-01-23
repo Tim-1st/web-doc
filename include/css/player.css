@@ -1,13 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 
-
-
 body {
   font-family: "Ubuntu";
   overflow: hidden;
 }
-
-
 
 
 /* =========================
@@ -61,9 +57,6 @@ a {
 }
 
 
-
-
-
 /* =========================
    Header
   ========================= */
@@ -83,8 +76,6 @@ header {
   text-align: center; 
   margin: 0 auto; 
 }
-
-
 
 
 /* =========================
@@ -175,11 +166,8 @@ footer a#share-btn:hover #share-icon {
 }
 
 
-
-
-
 /* =========================
-   Catégories
+   Catégories - BASE
   ========================= */
 
 .catégories {
@@ -235,52 +223,9 @@ footer a#share-btn:hover #share-icon {
 }
 
 
-
-
-
-
-
-
-
-
-/* =========================
-   MEDIA QUERIES - GRANDS ÉCRANS
-  ========================= */
-
-@media (min-width: 1920px) {
-  h1 {
-    font-size: 2.5rem;
-  }
-
-  h2 {
-    font-size: 1.1rem;
-  }
-
-  .catégories {
-    left: 18rem;
-  }
-
-  .cercle {
-    width: 60px;
-    height: 60px;
-  }
-
-  .content {
-    width: 18rem;
-    height: 2.5rem;
-  }
-
-  footer {
-    width: 60rem;
-    height: 2.8rem;
-  }
-
-  footer .left-links a,
-  #fullscreen-text,
-  #share-text {
-    font-size: 12px;
-  }
-}
+/* ==========================================
+   TRÈS GRANDS ÉCRANS (2560px+)
+   ========================================== */
 
 @media (min-width: 2560px) {
   h1 {
@@ -318,30 +263,114 @@ footer a#share-btn:hover #share-icon {
 }
 
 
+/* ==========================================
+   GRANDS ÉCRANS (1920px - 2559px)
+   ========================================== */
 
-
-
-
-
-
-
-
-/* =========================
-   MEDIA QUERIES - PETITS ÉCRANS
-  ========================= */
-
-@media (max-width: 1120px) {
-
-  .boutton {
-    width: fit-content; 
+@media (min-width: 1920px) and (max-width: 2559px) {
+  h1 {
+    font-size: 2.5rem;
   }
 
+  h2 {
+    font-size: 1.1rem;
+  }
+
+  .catégories {
+    left: 18rem;
+  }
+
+  .cercle {
+    width: 60px;
+    height: 60px;
+  }
+
+  .content {
+    width: 18rem;
+    height: 2.5rem;
+  }
+
+  footer {
+    width: 60rem;
+    height: 2.8rem;
+  }
+
+  footer .left-links a,
+  #fullscreen-text,
+  #share-text {
+    font-size: 12px;
+  }
 }
 
 
-@media (max-width: 955px) {
+/* ==========================================
+   FORMAT INTERMÉDIAIRE (1024px - 1279px)
+   Catégories compactes pour laisser place au player
+   ========================================== */
 
-html {
+@media (min-width: 1024px) and (max-width: 1279px) {
+  .catégories {
+    left: 11rem;
+  }
+
+  .boutton {
+    margin-bottom: 2rem;
+    gap: 0.7rem;
+  }
+
+  .cercle {
+    width: 40px;
+    height: 40px;
+  }
+
+  .content {
+    width: 12rem;
+    height: 1.8rem;
+  }
+
+  h2 {
+    font-size: 0.8rem;
+  }
+}
+
+
+/* ==========================================
+   PETITS DESKTOP (900px - 1023px)
+   Catégories très compactes
+   ========================================== */
+
+@media (min-width: 900px) and (max-width: 1023px) {
+  .catégories {
+    left: 9rem;
+  }
+
+  .boutton {
+    margin-bottom: 1.5rem;
+    gap: 0.5rem;
+  }
+
+  .cercle {
+    width: 35px;
+    height: 35px;
+  }
+
+  .content {
+    width: 10rem;
+    height: 1.6rem;
+  }
+
+  h2 {
+    font-size: 0.75rem;
+  }
+}
+
+
+/* ==========================================
+   RESPONSIVE MOBILE (≤ 955px)
+   ========================================== */
+
+@media (max-width: 955px) {
+  html {
     overflow-y: auto !important;
     overflow-x: hidden !important;
   }
@@ -462,7 +491,6 @@ html {
   #catégorie-ajust {
     width: auto;
   }
-
 }
 
 

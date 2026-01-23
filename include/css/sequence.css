@@ -1,3 +1,7 @@
+/* ==========================================
+   VIDEO PLAYER - Base styles (Desktop)
+   ========================================== */
+
 .video-section {
   position: fixed;
   right: 3rem;
@@ -17,7 +21,7 @@
 
 .video-container {
   position: relative;
-  padding-bottom: 56.25%; /* Ratio 16:9 (9/16 = 0.5625) */
+  padding-bottom: 56.25%; /* Ratio 16:9 */
   height: 0;
   overflow: hidden;
 }
@@ -94,8 +98,33 @@ video {
   transform: scale(1.05);
 }
 
-/* Media queries - Grands écrans */
-@media (min-width: 1920px) {
+
+/* ==========================================
+   TRÈS GRANDS ÉCRANS (2560px+)
+   ========================================== */
+
+@media (min-width: 2560px) {
+  .video-section {
+    width: clamp(950px, calc(100vw - 30rem), 1400px);
+    right: 4rem;
+  }
+
+  .chapters {
+    gap: 1.5rem;
+  }
+
+  .chapter-btn {
+    font-size: 1.2rem;
+    padding: 1rem 1.8rem;
+  }
+}
+
+
+/* ==========================================
+   GRANDS ÉCRANS (1920px - 2559px)
+   ========================================== */
+
+@media (min-width: 1920px) and (max-width: 2559px) {
   .video-section {
     width: clamp(750px, calc(100vw - 28rem), 1050px);
     right: 3rem;
@@ -111,46 +140,97 @@ video {
   }
 }
 
-@media (min-width: 2560px) {
+
+/* ==========================================
+   DESKTOP STANDARD (1280px - 1919px)
+   Priorité au player, catégories normales
+   ========================================== */
+
+@media (min-width: 1280px) and (max-width: 1919px) {
   .video-section {
-    width: clamp(950px, calc(100vw - 28rem), 1400px);
-    right: 3rem;
+    right: 2.5rem;
+    width: clamp(600px, calc(100vw - 24rem), 900px);
+  }
+
+  .chapter-btn {
+    font-size: 0.85rem;
+    padding: 0.65rem 1.1rem;
+  }
+}
+
+
+/* ==========================================
+   FORMAT INTERMÉDIAIRE (1024px - 1279px)
+   ZONE CRITIQUE : Player prioritaire
+   Catégories compactes
+   ========================================== */
+
+@media (min-width: 1024px) and (max-width: 1279px) {
+  /* Player prend plus de place */
+  .video-section {
+    right: 2rem;
+    width: clamp(550px, calc(100vw - 20rem), 750px);
   }
 
   .chapters {
-    gap: 1.5rem;
-  }
-
-  .chapter-btn {
-    font-size: 1.2rem;
-    padding: 1rem 1.8rem;
-  }
-}
-
-/* Media queries */
-@media (min-width: 1120px) and (max-width: 1919px) {
-  .video-section {
-    right: 3rem;
-    width: clamp(650px, calc(100vw - 26rem), 850px);
-  }
-
-  .chapter-btn {
-    font-size: 0.9rem;
-    padding: 0.7rem 1.2rem;
-  }
-}
-
-@media (max-width: 1120px) {
-  .video-section {
-    right: 2rem;
-    width: 500px;
+    gap: 0.5rem;
   }
 
   .chapter-btn {
     font-size: 0.75rem;
+    padding: 0.55rem 0.9rem;
+  }
+}
+
+
+/* ==========================================
+   PETITS DESKTOP / TABLETTES (900px - 1023px)
+   Player en priorité absolue
+   Catégories très compactes
+   ========================================== */
+
+@media (min-width: 900px) and (max-width: 1023px) {
+  .video-section {
+    right: 1.5rem;
+    width: clamp(500px, calc(100vw - 18rem), 650px);
+  }
+
+  .chapters {
+    gap: 0.4rem;
+  }
+
+  .chapter-btn {
+    font-size: 0.7rem;
     padding: 0.5rem 0.8rem;
   }
 }
+
+
+/* ==========================================
+   TRANSITION VERS MOBILE (800px - 899px)
+   ========================================== */
+
+@media (max-width: 899px) {
+  .video-section {
+    right: 1rem;
+    width: clamp(450px, calc(100vw - 16rem), 600px);
+  }
+
+  .chapters {
+    gap: 0.4rem;
+  }
+
+  .chapter-btn {
+    font-size: 0.68rem;
+    padding: 0.45rem 0.75rem;
+  }
+}
+
+
+/* ==========================================
+   MOBILE & TABLETTES (≤ 955px)
+   Layout vertical
+   ========================================== */
 
 @media (max-width: 955px) {
   .catégories {
@@ -179,9 +259,14 @@ video {
   }
 }
 
-@media (max-width: 800px) {
+
+/* ==========================================
+   TABLETTES (481px - 800px)
+   ========================================== */
+
+@media (min-width: 481px) and (max-width: 800px) {
   .video-section {
-    max-width: 480px;
+    max-width: 500px;
   }
 
   .chapters {
@@ -194,15 +279,22 @@ video {
   }
 }
 
+
+/* ==========================================
+   MOBILE (≤ 480px)
+   ========================================== */
+
 @media (max-width: 480px) {
   .video-section {
     max-width: 100%;
+    padding: 0 0.5rem;
   }
 
   .chapters {
     flex-direction: row;
     width: 100%;
     justify-content: center;
+    gap: 0.3rem;
   }
 
   .chapter-btn {
