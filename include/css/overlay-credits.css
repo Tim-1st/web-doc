@@ -4,7 +4,7 @@
   right: 0;
   width: 57%;
   max-width: 700px;
-  height: calc(100% - 5rem);
+  height: calc(100% - 4rem);
   background-color: rgba(255, 255, 255, 0.9);  
   z-index: 9999;
   transform: translateX(100%); 
@@ -31,7 +31,7 @@
   height: 100%;  
   display: flex;
   flex-direction: column;  
-  font-size: 1.1rem;
+  font-size: clamp(0.55rem, 0.35rem + 0.35vw, 0.85rem);
 }
 
 #credits-overlay h2 {
@@ -47,9 +47,10 @@
   cursor: pointer;
   transition: background-color 0.3s ease;
   align-self: center; 
-  margin-top: 2rem; 
+  margin-top: 1rem; 
   margin-bottom: 1rem;
   z-index: 2;
+  font-size: clamp(0.7rem, 0.45rem + 0.3vw, 0.9rem);
 }
 
 #close-overlay:hover {
@@ -69,7 +70,7 @@
 }
 
 #logos-container img {
-  height: 50px; 
+  height: clamp(30px, 2.5vw, 45px);
   width: auto;
   transition: height 0.3s ease;
 }
@@ -79,12 +80,13 @@
   display: flex;
   justify-content: center;
   font-weight: bold;
-  font-size: 2rem;
-  margin-bottom: 1.5rem;
+  font-size: clamp(0.9rem, 0.65rem + 0.6vw, 1.4rem);
+  margin-bottom: 0.8rem;
 }
 
 .overlay-content p {
   color: #000000;
+  font-size: clamp(0.55rem, 0.35rem + 0.35vw, 0.85rem);
 }
 
 .overlay-content a {
@@ -92,14 +94,21 @@
   color: #56739A;
   font-weight: bold;
   padding-left: 1rem;
-  margin-bottom: 0.7rem;
-  font-size: 1.1rem;
+  margin-bottom: 0.4rem;
+  font-size: clamp(0.55rem, 0.35rem + 0.35vw, 0.85rem);
+  transition: transform 0.2s ease;
+  display: inline-block;
+}
+
+.overlay-content a:hover {
+  transform: scale(1.05);
 }
 
 .overlay-content span {
   color: #56739A;
   font-weight: bold;
   padding-left: 1rem;
+  font-size: clamp(0.55rem, 0.35rem + 0.35vw, 0.85rem);
 }
 
 #credits-overlay {
@@ -112,8 +121,8 @@
 }
 
 .participation {
-  padding-top: 1rem;
-  padding-bottom: 15px;
+  padding-top: 0.5rem;
+  padding-bottom: 8px;
   margin: 0;
 }
 
@@ -126,14 +135,14 @@
   justify-content: space-between;
   align-items: center;
   gap: 2rem;
-  padding-top: 1rem;
-  margin-bottom: 0.5rem;
+  padding-top: 0.5rem;
+  margin-bottom: 0.3rem;
 }
 
 .bloc-1 div {
   display: flex;
   flex-direction: column;
-  gap: 1.2rem;
+  gap: 0.6rem;
 }
 
 .paragraph p {
@@ -157,7 +166,7 @@
 }
 
 #logos-container {
-  margin-bottom: 1.5rem;
+  margin-bottom: 0.8rem;
 }
 
 #close-overlay {
@@ -171,8 +180,8 @@ hr {
     margin: 0;
     background: #000000;
     border-color: #000000;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
 }
 
 .overlay-footer p {
@@ -180,11 +189,44 @@ hr {
   justify-content: center; 
   width: 100%; 
   margin-top: 1vh;
+  font-size: clamp(0.55rem, 0.35rem + 0.3vw, 0.8rem);
 }
 
 .section-info p {
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
   padding: 0;
+}
+
+/* Style spécifique pour le lien du podcast */
+.podcast-link {
+  padding-left: 0 !important;
+  margin-top: 1rem;
+  margin-bottom: 0.4rem;
+}
+
+/* Media queries pour ajustements spécifiques */
+@media (min-width: 1400px) {
+    .overlay-content {
+        font-size: 0.85rem;
+    }
+    
+    .overlay-content h2 {
+        font-size: 1.6rem;
+    }
+    
+    .overlay-content p,
+    .overlay-content a,
+    .overlay-content span {
+        font-size: 0.85rem;
+    }
+    
+    #close-overlay {
+        font-size: 0.9rem;
+    }
+    
+    #logos-container img {
+        height: 45px;
+    }
 }
 
 @media (max-width: 1120px) {
@@ -196,8 +238,18 @@ hr {
         gap: 1.2rem;
     }
 
-    #logos-container img {
-        height: 40px; 
+    .overlay-content {
+        font-size: clamp(0.6rem, 0.4rem + 0.3vw, 0.8rem);
+    }
+    
+    .overlay-content h2 {
+        font-size: clamp(1rem, 0.75rem + 0.6vw, 1.4rem);
+    }
+    
+    .overlay-content p,
+    .overlay-content a,
+    .overlay-content span {
+        font-size: clamp(0.6rem, 0.4rem + 0.3vw, 0.8rem);
     }
 }
 
@@ -215,6 +267,12 @@ hr {
     #credits-overlay.open {
         transform: translateX(0);  
     }
+    
+    .overlay-content {
+        justify-content: space-between;
+        padding-top: 2rem;
+        padding-bottom: 1.5rem;
+    }
 
     #logos-container {
         flex-direction: row; 
@@ -224,30 +282,62 @@ hr {
 
     #close-overlay {
         margin-top: 1rem; 
+        font-size: 0.9rem;
     }
 
     #logos-container img {
         height: 40px;  
     }
 
-    #close-overlay {
-        font-size: 0.9rem;  
-    }
-
     .overlay-content h2 {
-        font-size: 1rem;  
+        font-size: 1rem;
+        margin-bottom: 1.2rem;
     }
 
-    .overlay-content p, .overlay-content a {
+    .overlay-content p, .overlay-content a, .overlay-content span {
         font-size: 0.8rem;  
+    }
+    
+    .overlay-content a:hover {
+        transform: none;
     }
 
     hr {
-        margin-top: 0.7rem !important;
-        margin-bottom: 0.7rem !important;
+        margin-top: 0.9rem !important;
+        margin-bottom: 0.9rem !important;
     }
 
     .section-info {
         display: none;
+    }
+    
+    .overlay-footer p {
+        font-size: 0.7rem;
+        margin-top: 2rem;
+    }
+    
+    .overlay-footer {
+        padding-bottom: 2rem;
+    }
+    
+    .bloc-1 {
+        margin-bottom: 1rem;
+    }
+    
+    .participation {
+        padding-top: 1rem;
+        padding-bottom: 12px;
+    }
+    
+    .overlay-content a {
+        margin-bottom: 0.6rem;
+    }
+    
+    .section-intervenant p {
+        margin-bottom: 0.6rem;
+    }
+    
+    .podcast-link {
+        margin-top: 1.2rem;
     }
 }

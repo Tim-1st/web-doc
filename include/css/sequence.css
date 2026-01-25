@@ -142,19 +142,41 @@ video {
 
 
 /* ==========================================
-   DESKTOP STANDARD (1280px - 1919px)
-   Priorité au player, catégories normales
+   FORMAT SPÉCIFIQUE (1400px - 1600px)
+   Zone critique pour format 1492px
    ========================================== */
 
-@media (min-width: 1280px) and (max-width: 1919px) {
+@media (min-width: 1400px) and (max-width: 1600px) {
   .video-section {
     right: 2.5rem;
-    width: clamp(600px, calc(100vw - 24rem), 900px);
+    width: clamp(550px, calc(100vw - 26rem), 700px);
+  }
+
+  .chapters {
+    gap: 0.5rem;
   }
 
   .chapter-btn {
-    font-size: 0.85rem;
-    padding: 0.65rem 1.1rem;
+    font-size: 0.8rem;
+    padding: 0.6rem 1rem;
+  }
+}
+
+
+/* ==========================================
+   DESKTOP STANDARD (1280px - 1399px)
+   Priorité au player, catégories normales
+   ========================================== */
+
+@media (min-width: 1280px) and (max-width: 1399px) {
+  .video-section {
+    right: 2.5rem;
+    width: clamp(550px, calc(100vw - 25rem), 720px);
+  }
+
+  .chapter-btn {
+    font-size: 0.8rem;
+    padding: 0.6rem 1rem;
   }
 }
 
