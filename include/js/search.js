@@ -214,6 +214,79 @@ const searchDatabase = [
     parentCategory: 'Conseil',
     chapterTime: 130,
     content: ['futures', 'développeurs', 'conseil']
+  },
+  // Chapitres - Podcast
+  {
+    title: 'Présentation',
+    page: 'podcast.html',
+    category: 'chapter',
+    parentCategory: 'Podcast',
+    chapterTime: 0,
+    content: ['Présentation', 'podcast', 'introduction']
+  },
+  {
+    title: 'Contexte',
+    page: 'podcast.html',
+    category: 'chapter',
+    parentCategory: 'Podcast',
+    chapterTime: 52,
+    content: ['Contexte', 'podcast', 'background']
+  },
+  {
+    title: 'Les Difficultés',
+    page: 'podcast.html',
+    category: 'chapter',
+    parentCategory: 'Podcast',
+    chapterTime: 175,
+    content: ['Difficultés', 'podcast', 'challenges', 'problèmes']
+  },
+  {
+    title: 'Tournage',
+    page: 'podcast.html',
+    category: 'chapter',
+    parentCategory: 'Podcast',
+    chapterTime: 208,
+    content: ['Tournage', 'podcast', 'production', 'réalisation']
+  },
+  {
+    title: 'L\'apport du projet',
+    page: 'podcast.html',
+    category: 'chapter',
+    parentCategory: 'Podcast',
+    chapterTime: 260,
+    content: ['apport', 'projet', 'podcast', 'bénéfices']
+  },
+  {
+    title: 'Retour critique',
+    page: 'podcast.html',
+    category: 'chapter',
+    parentCategory: 'Podcast',
+    chapterTime: 315,
+    content: ['Retour', 'critique', 'podcast', 'analyse']
+  },
+  {
+    title: 'BUT MMI',
+    page: 'podcast.html',
+    category: 'chapter',
+    parentCategory: 'Podcast',
+    chapterTime: 447,
+    content: ['BUT', 'MMI', 'podcast', 'formation', 'études']
+  },
+  {
+    title: 'Le métier idéal',
+    page: 'podcast.html',
+    category: 'chapter',
+    parentCategory: 'Podcast',
+    chapterTime: 532,
+    content: ['métier', 'idéal', 'podcast', 'carrière']
+  },
+  {
+    title: 'Conclusion',
+    page: 'podcast.html',
+    category: 'chapter',
+    parentCategory: 'Podcast',
+    chapterTime: 600,
+    content: ['Conclusion', 'podcast', 'fin', 'résumé']
   }
 ];
 
@@ -447,3 +520,4 @@ document.addEventListener('DOMContentLoaded', () => {
     window.history.replaceState({}, document.title, window.location.pathname);
   }
 });
+
