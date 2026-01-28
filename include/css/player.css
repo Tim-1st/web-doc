@@ -357,6 +357,7 @@ footer a#share-btn:hover #share-icon {
   .content {
     width: 10rem;
     height: 1.6rem;
+    padding: 0.3rem 0;
   }
 
   h2 {
