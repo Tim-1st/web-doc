@@ -30,7 +30,7 @@ Ce projet est l'un des plus complets de mon portfolio, mobilisant une expertise 
 ---
 
 ## Stack Technique
-* **Langages :** HTML5, CSS3, JavaScript (Vanilla)
+* **Langages :** HTML5, CSS3, JavaScript
 * **Déploiement :** GitHub Pages
 * **Gestion de version :** Git & GitHub
 * **Outils :** DaVinci Resolve, VS Code
